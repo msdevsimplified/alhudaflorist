@@ -45,8 +45,8 @@ const ContactFrom = () => {
             <div className="container px-12 py-12 mx-auto">
                 <div className=" w-[80%]">
                     <p className="font-medium text-gray-800">Contact us</p>
-                    <p className="mt-3 text-gray-500">At Alhuda Florist, we understand that every flower tells a story, and we are honored to be a part of your cherished moments. Whether you're expressing joy, love, gratitude, or sympathy, our mission is to create unforgettable floral experiences that leave a lasting impression.</p>
-                    <p className="mt-3 text-gray-500">Join us in celebrating life&apos;s most precious moments with the timeless beauty of flowers. Discover the artistry and excellence of Alhuda Florist – where every bloom tells a tale of love, joy, and elegance.</p>
+                    <p className="mt-3 text-gray-500">At Alhuda Florist, we understand that every flower tells a story, and we are honored to be a part of your cherished moments. Whether you&apos;re expressing joy, love, gratitude, or sympathy, our mission is to create unforgettable floral experiences that leave a lasting impression.</p>
+                    <p className="mt-3 text-gray-500">Join us in celebrating life&apos;s most precious moments with the timeless beauty of flowers. Discover the artistry and excellence of Alhuda Florist where every bloom tells a tale of love, joy, and elegance.</p>
                 </div>
 
                 <section className="text-gray-600 body-font relative">
