@@ -16,8 +16,8 @@ export const Tab = ({ id, label, openTab, setOpenTab }) => (
   <li className="-flex items-center">
     <a
       className={`text-medium font-normal uppercase px-4 cursor-pointer py-3 block leading-normal ${openTab === id
-          ? `text-[#E6BE8A] border-b-2 border-[#E6BE8A]/50`
-          : `text-[#FAFAD2]/50`
+          ? `text-[#0c5b47] border-b-2 border-[#E6BE8A]/50`
+          : `text-[#0c5b47]/50`
         }`}
       onClick={(e) => {
         e.preventDefault();

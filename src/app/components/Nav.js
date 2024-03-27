@@ -105,7 +105,7 @@ export const NavLink = ({ to, children, onClick }) => {
         <a
             href={to}
             onClick={onClick}
-            className="text-[#0c5b47] hover:border-b-2 uppercase text-sm font-mono font-normal hover:border-pink-300 text-center hover:text-[#E6BE8A] transition duration-300 cursor-pointer"
+            className="text-[#0c5b47] hover:border-b-2 uppercase text-sm font-['Poppins'] font-normal hover:border-pink-300 text-center hover:text-[#E6BE8A] transition duration-300 cursor-pointer"
         >
             {children}
         </a>

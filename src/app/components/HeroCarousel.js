@@ -54,7 +54,7 @@ export default function HeroCarousel() {
 
                                 </p>
                             </div>
-                            <button type="button" className="px-8 py-3 w-44 font-normal uppercase text-base border rounded border-[#E6BE8A] text-[#FFF0E9]">Read More</button>
+                            <button type="button" className="px-8 py-3 w-44 font-normal uppercase text-base border rounded border-[#E6BE8A] text-[#0c5b47]">Read More</button>
                         </div>
                     </div>
                 </SwiperSlide>

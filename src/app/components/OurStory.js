@@ -1,28 +1,28 @@
 
 export default function OurStory() {
   return (
-    <div className="px-4 bg-[#fff] py-24 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-12 lg:pb-24">
-      <div className="max-w-xl flex flex-col justify-center items-center mb-2 md:mx-auto sm:text-center lg:max-w-2xl md:mb-24">
+    <div className="px-4 bg-[#fff] py-24 mx-auto max-w-full lg:pb-24">
+      <div className="flex flex-col justify-center items-center mb-2 md:mx-auto sm:text-center md:mb-24">
         <div>
-          <p className="inline-block parisienne-regular px-3 py-px mb-4 text-3xl font-semibold tracking-wider text-gray-900 rounded-full bg-teal-accent-400">
+          <p className="inline-block parisienne-regular px-3 py-px mb-4 text-3xl font-semibold tracking-wider text-[#0c5b47] rounded-full bg-teal-accent-400">
             Our Services
           </p>
         </div>
-        <h2 className="max-w-lg mb-6  text-3xl font-medium leading-none tracking-tight text-[#E6BE8A] sm:text-4xl md:mx-auto">
+        <h2 className="max-w-lg mb-6  text-3xl font-medium leading-none tracking-tight text-[#0c5b47] sm:text-4xl md:mx-auto">
 
           Perfect Florist Spot
         </h2>
       </div>
-      <div className="grid max-w-screen-xl gap-8 lg:grid-cols-2 sm:mx-auto">
+      <div className="grid gap-8 lg:grid-cols-2 sm:mx-auto">
         <div className="flex flex-col justify-center bg-[url('https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/h2-img-1.png')] bg-center bg-no-repeat">
           <div className="flex">
-            <div className="mr-4">
+            <div className="">
               <div className="flex items-center justify-center w-10 h-10 mb-3 rounded-full text-gray-600">
                 <i class="fa-duotone fa-flower-daffodil"></i>
               </div>
             </div>
             <div>
-              <h6 className="mb-2 text-[#E6BE8A] font-medium text-xl ">
+              <h6 className="mb-2 text-[#0c5b47] font-medium text-xl ">
                 Party Flower
               </h6>
               <p className="text-sm text-gray-600 font-normal">
@@ -34,13 +34,13 @@ export default function OurStory() {
             </div>
           </div>
           <div className="flex">
-            <div className="mr-4">
+            <div className="">
               <div className="flex items-center justify-center w-10 h-10 mb-3 rounded-full text-gray-600">
                 <i class="fa-duotone fa-flower-daffodil"></i>
               </div>
             </div>
             <div>
-              <h6 className="mb-2 text-[#E6BE8A] font-medium text-xl">
+              <h6 className="mb-2 text-[#0c5b47] font-medium text-xl">
                 Wedding Flower
               </h6>
               <p className="text-sm text-gray-600 font-normal">
@@ -52,13 +52,13 @@ export default function OurStory() {
             </div>
           </div>
           <div className="flex">
-            <div className="mr-4">
+            <div className="">
               <div className="flex items-center justify-center w-10 h-10 mb-3 rounded-full text-gray-600">
                 <i class="fa-duotone fa-flower-daffodil"></i>
               </div>
             </div>
             <div>
-              <h6 className="mb-2 text-[#E6BE8A] font-medium text-xl">
+              <h6 className="mb-2 text-[#0c5b47] font-medium text-xl">
                 Birthday Flower
               </h6>
               <p className="text-sm text-gray-600 font-normal">
@@ -70,13 +70,13 @@ export default function OurStory() {
             </div>
           </div>
           <div className="flex">
-            <div className="mr-4">
+            <div className="">
               <div className="flex items-center justify-center w-10 h-10 mb-3 rounded-full text-gray-600">
                 <i class="fa-duotone fa-flower-daffodil"></i>
               </div>
             </div>
             <div>
-              <h6 className="mb-2 text-[#E6BE8A] font-medium text-xl">
+              <h6 className="mb-2 text-[#0c5b47] font-medium text-xl">
                 Valentine Flower
               </h6>
               <p className="text-sm text-gray-600 font-normal">

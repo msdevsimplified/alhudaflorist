@@ -1,9 +1,10 @@
+import Image from 'next/image';
 import React from 'react';
 
 const Footer = () => {
     return (
 
-        <footer className="bg-[#FEFAF3] font-mono">
+        <footer className="bg-[#FEFAF3]">
             <div className="mx-auto max-w-screen-xl px-4 pt-4 pb-16 sm:px-6 lg:px-8">
 
                 <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -163,22 +164,23 @@ const Footer = () => {
 
                         <div className='mt-8 grid grid-cols-3 gap-2'>
                             <a href="#" className="group relative flex h-12 items-end overflow-hidden bg-gray-100 shadow-lg md:h-20">
-                                <img src="https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/gallery-img-3.jpg" loading="lazy" alt="Photo by Minh Pham" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+                               {/* <Image src="https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/gallery-img-3.jpg" loading="lazy" width={100} height={100} alt="Photo by Minh Pham" className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" /> */}
+                                <img src="https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/gallery-img-3.jpg" loading="lazy" alt="Photo by Minh Pham" className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
                             </a>
                             <a href="#" className="group relative flex h-12 items-end overflow-hidden bg-gray-100 shadow-lg md:h-20">
-                                <img src="https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/gallery-img-3.jpg" loading="lazy" alt="Photo by Minh Pham" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+                                <img src="https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/gallery-img-3.jpg" loading="lazy" alt="Photo by Minh Pham" className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
                             </a>
                             <a href="#" className="group relative flex h-12 items-end overflow-hidden bg-gray-100 shadow-lg md:h-20">
-                                <img src="https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/gallery-img-3.jpg" loading="lazy" alt="Photo by Minh Pham" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+                                <img src="https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/gallery-img-3.jpg" loading="lazy" alt="Photo by Minh Pham" className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
                             </a>
                             <a href="#" className="group relative flex h-12 items-end overflow-hidden bg-gray-100 shadow-lg md:h-20">
-                                <img src="https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/gallery-img-3.jpg" loading="lazy" alt="Photo by Minh Pham" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+                                <img src="https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/gallery-img-3.jpg" loading="lazy" alt="Photo by Minh Pham" className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
                             </a>
                             <a href="#" className="group relative flex h-12 items-end overflow-hidden bg-gray-100 shadow-lg md:h-20">
-                                <img src="https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/gallery-img-3.jpg" loading="lazy" alt="Photo by Minh Pham" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+                                <img src="https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/gallery-img-3.jpg" loading="lazy" alt="Photo by Minh Pham" className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
                             </a>
                             <a href="#" className="group relative flex h-12 items-end overflow-hidden bg-gray-100 shadow-lg md:h-20">
-                                <img src="https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/gallery-img-3.jpg" loading="lazy" alt="Photo by Minh Pham" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+                                <img src="https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/gallery-img-3.jpg" loading="lazy" alt="Photo by Minh Pham" className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
                             </a>
                         </div>
                     </div>

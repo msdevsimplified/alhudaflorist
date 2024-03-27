@@ -1,6 +1,6 @@
 const Gallary = () => {
     return (
-        <section className="text-gray-600 bg-white mt-3 body-font">
+        <section className="text-gray-600 bg-white body-font">
             <div className="container py-24 mx-auto flex flex-wrap justify-center">
                 <div className="max-w-xl flex flex-col justify-center items-center text-center mb-2 md:mx-auto sm:text-center lg:max-w-2xl md:mb-4">
                     <div className="text-center">
@@ -8,14 +8,14 @@ const Gallary = () => {
                             Wonderful gift
                         </p>
                     </div>
-                    <h2 className="max-w-lg mb-6 font-['Prata'] text-3xl font-medium leading-none tracking-tight text-[#E6BE8A] sm:text-4xl md:mx-auto">
+                    <h2 className="max-w-lg mb-6 text-3xl font-bold leading-none tracking-tight text-[#E6BE8A] sm:text-4xl md:mx-auto">
                         Gallery of works
                     </h2>
                 </div>
                 <div className=" w-full sm:py-8 ">
-                    <div className="mx-auto max-w-screen-2xl px-4 md:px-12">
+                    <div className="mx-auto max-w-screen-2xl">
 
-                        <div className="max-w-screen-xl p-5 mx-auto bg-transparent">
+                        <div className="max-w-screen-xl mx-auto bg-transparent">
                             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 md:gap-0 lg:grid-rows-2">
                                 <div className="relative flex items-end justify-start w-full text-left bg-center bg-cover cursor-pointer h-96 md:col-span-2 lg:row-span-2 lg:h-full group bg-[url('https://loveflowersmiami.com/wp-content/uploads/2023/03/Bridal-Wedding-Cascade-Calla-Lillies-Phalaenopsis-Dendrobium-and-Cymbidium-Orchids-and-Roses-1-1024x1024.jpg')] dark:bg-gray-500">
                                     <div className="absolute top-0 bottom-0 left-0 right-0 dark:via-transparent dark:from-gray-900 dark:to-gray-900"></div>

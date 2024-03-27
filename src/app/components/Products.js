@@ -7,7 +7,7 @@ const Products = ({ products, cardStyle }) => {
   return (
     <div
       id="Projects"
-      className={`w-full mx-auto grid ${!cardStyle ? 'grid-cols-1 lg:grid-cols-3' : 'grid-cols-1 lg:grid-cols-1'} justify-items-center justify-center gap-x-6 px-6 gap-y-14  `}
+      className={`w-full mx-auto grid ${!cardStyle ? 'grid-cols-1 lg:grid-cols-3' : 'grid-cols-1 lg:grid-cols-1'} justify-items-center bg-white justify-evenly w-full `}
     >
       {products.map((product, index) => (
         <Card key={index} index={index} products={products} product={product} cardStyle={cardStyle} />
