@@ -8,7 +8,7 @@ const About = () => {
                     <div className="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-1/2 sm:w-2/3 content-start sm:pr-10">
                         <div className="w-full sm:p-4 px-4 mb-6">
                             <h1 className="title-font text-2xl mb-2 text-gray-900 font-['Prata'] font-bold">Al Huda Flowers</h1>
-                            <p className="leading-relaxed py-4 text-gray-600 font-semibold">Welcome to Alhuda Florist – Your Premier Destination for Stunning Floral Arrangements in Dubai!</p>
+                            <p className="leading-relaxed py-4 text-gray-600 font-semibold">Welcome to Alhuda Florist Your Premier Destination for Stunning Floral Arrangements in Dubai!</p>
                             <p className="leading-relaxed">At Alhuda Florist, nestled in the heart of Dubai, we take pride in being the quintessential destination for all your floral needs. With an unwavering commitment to excellence and a passion for the art of floral design, we offer an exquisite array of breathtaking arrangements that infuse every occasion with beauty and elegance.</p>
                             <p className="leading-relaxed py-4">What sets us apart is our dedication to crafting bespoke floral creations tailored to your unique vision and requirements. Whether you're celebrating a milestone birthday, commemorating an anniversary, marking a grand opening, or expressing love on a special day, our expert florists are here to transform your dreams into stunning reality.</p>
                         </div>

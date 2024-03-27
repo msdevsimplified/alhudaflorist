@@ -93,7 +93,7 @@ const Login = () => {
                                             <span className="relative text-base font-semibold text-white">Connect</span>
                                         </button>
                                         <p class="border-t border-gray-100 dark:border-gray-700 pt-6 text-sm text-gray-500 dark:text-gray-400">
-                                            Don't have an account ?
+                                            Don&apos;t have an account ?
                                             <a href="register" class="text-blue-400">Sign up</a>
                                         </p>
                                     </Form >

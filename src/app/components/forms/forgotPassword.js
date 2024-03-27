@@ -42,7 +42,7 @@ function ForgotPasswordForm({ token }) {
                     <h1 className="mb-1 text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
                         Forgot your password?
                     </h1>
-                    <p className="font-light py-4 text-sm text-gray-500">Don't fret! Just type in your email and we will send you a code to reset your password!</p>
+                    <p className="font-light py-4 text-sm text-gray-500">Don&apos;t fret! Just type in your email and we will send you a code to reset your password!</p>
                     <Formik
                         validationSchema={validationSchema}
                         initialValues={initialValues}
