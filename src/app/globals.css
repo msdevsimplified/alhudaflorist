@@ -18,7 +18,7 @@ body {
   background-color: #fff;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  margin: 2rem 4rem;
+  margin: 0 4rem;
 }
 .grandiflora-one-regular {
   font-family: "Tangerine";
@@ -101,6 +101,9 @@ body {
       font-weight: 600;
       letter-spacing: 5px;
       line-height: 80px;
+    }
+    body {
+      margin: 2rem;
     }
   }
 

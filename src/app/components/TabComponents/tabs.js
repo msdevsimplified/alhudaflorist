@@ -9,9 +9,9 @@ export const Tabs = ({ tabData, listing }) => {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <div className="w-auto">
+      <div className="w-full px-8">
         <ul
-          className="flex mb-0 list-none gap-8 flex-wrap pt-3 pb-4 flex-row justify-center"
+          className="flex mb-0 p list-none gap-8 flex-wrap pt-3 flex-row justify-start"
           role="tablist"
         >
           {tabData.map((tab, i) => (
@@ -25,7 +25,7 @@ export const Tabs = ({ tabData, listing }) => {
           ))}
         </ul>
       </div>
-      <div className="relative pt-16 px-2 flex flex-col min-w-0 break-words bg-white w-full rounded">
+      <div className="relative pt-6 px-2 flex flex-col min-w-0 break-words bg-white w-full rounded">
         <div className="flex-auto">
           <div className="tab-content tab-space">
             {tabData.map((tab) => (

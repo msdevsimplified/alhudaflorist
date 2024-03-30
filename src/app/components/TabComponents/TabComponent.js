@@ -15,7 +15,7 @@ export const TabContent = ({ id, openTab, children }) => (
 export const Tab = ({ id, label, openTab, setOpenTab }) => (
   <li className="-flex items-center">
     <a
-      className={`text-medium font-normal uppercase px-4 cursor-pointer py-3 block leading-normal ${openTab === id
+      className={`text-medium font-normal uppercase px-4 cursor-pointer block leading-normal ${openTab === id
           ? `text-[#0c5b47] border-b-2 border-[#E6BE8A]/50`
           : `text-[#0c5b47]/50`
         }`}

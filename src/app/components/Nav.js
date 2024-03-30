@@ -17,11 +17,15 @@ const NavBar = () => {
     }
 
     return (
-        <nav className="mx-auto bg-transparent flex flex-col relative z-[55] justify-between items-center">
-            <div className="relative justify-between px-4 lg:px-10 py-4 flex flex-row items-center w-full">
+        <nav className="mx-auto bg-[white] flex flex-col relative z-[55] justify-between items-center">
+            <div className="relative justify-between px-4 py-4 flex flex-row items-center w-full">
 
-                <a href="/" className="text-black text-xl font-bold p-0 m-0 block">
+                <a href="/" className="text-black text-xl inline-flex font-bold p-0 m-0 items-center">
                     <img src="/assets/brand.png" className="" alt="The Farmer's Market" />
+                    {/* <p className="text-2xl font-sans">
+                        <span className=' uppercase text-[#0c5b47]'>huda</span>
+                        <span className=' uppercase text-[#18181F]'>florist</span>
+                    </p> */}
                 </a>
 
                 <div className="main-nav hidden px-10 lg:flex justify-center z-[55] bg-transparent py-3 w-full">
@@ -46,11 +50,11 @@ const NavBar = () => {
                                 isMenuOpen ? (<i className="fa-regular fa-xmark"></i>) : (<i className="fa-regular fa-bars"></i>)
                             }
                         </span>
-                        <ReactWhatsapp number="+971 56 464 8961" className=' border-[#FAFAD2] rounded-full border py-1 px-3.5 text-[#FAFAD2] inline-flex gap-2 items-center' message="Hello World!!!" ><i className="fa-brands fa-whatsapp"></i> Whatsapp</ReactWhatsapp>
+                        <ReactWhatsapp number="+971 56 464 8961" className=' border-[#FAFAD2] rounded-full border py-1 px-3.5 text-[#0c5b47] inline-flex gap-2 items-center' message="Hello World!!!" ><i className="fa-brands fa-whatsapp"></i> Whatsapp</ReactWhatsapp>
                     </div>
                 </div>
                 <div className={`${userOption ? 'block' : 'hidden'} absolute z-[80] top-16 px-3.5 py-2 transition-all ease-in duration-300 select-none right-12 w-32 bg-white shadow-sm shadow-gray-400`}>
-                    <Link href="/login" className="text-[#fff] items-center hover:text-gray-300">
+                    <Link href="/login" className="text-[#0c5b47] items-center hover:text-gray-300">
                         Login
                     </Link>
                 </div>

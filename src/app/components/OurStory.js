@@ -5,7 +5,7 @@ export default function OurStory() {
       <div className="flex flex-col justify-center items-center mb-2 md:mx-auto sm:text-center md:mb-24">
         <div>
           <p className="inline-block parisienne-regular px-3 py-px mb-4 text-3xl font-semibold tracking-wider text-[#0c5b47] rounded-full bg-teal-accent-400">
-            Our Services
+          Why Choose Us
           </p>
         </div>
         <h2 className="max-w-lg mb-6  text-3xl font-medium leading-none tracking-tight text-[#0c5b47] sm:text-4xl md:mx-auto">
@@ -17,72 +17,67 @@ export default function OurStory() {
         <div className="flex flex-col justify-center bg-[url('https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/h2-img-1.png')] bg-center bg-no-repeat">
           <div className="flex">
             <div className="">
-              <div className="flex items-center justify-center w-10 h-10 mb-3 rounded-full text-gray-600">
+              <div className="flex items-center justify-center w-10 h-10 mb-3 rounded-full text-[#0c5b47]">
                 <i class="fa-duotone fa-flower-daffodil"></i>
               </div>
             </div>
             <div>
-              <h6 className="mb-2 text-[#0c5b47] font-medium text-xl ">
-                Party Flower
+              <h6 className="mb-2 text-gray-800 font-medium text-xl ">
+                Freshness Guaranteed
               </h6>
-              <p className="text-sm text-gray-600 font-normal">
-                Skate ipsum dolor sit amet, alley oop vert mute-air Colby Carter
-                flail 180 berm. Half-cab camel back ollie transition ledge Wes
-                Humpston 1080.
+              <p className="text-sm text-[#0c5b47] font-normal">
+                We source our flowers from the finest local and international
+                growers to ensure freshness and quality in every arrangement.
               </p>
               {/* <hr className="w-full my-6 border-pink-300" /> */}<br />
             </div>
           </div>
           <div className="flex">
             <div className="">
-              <div className="flex items-center justify-center w-10 h-10 mb-3 rounded-full text-gray-600">
+              <div className="flex items-center justify-center w-10 h-10 mb-3 rounded-full text-[#0c5b47]">
                 <i class="fa-duotone fa-flower-daffodil"></i>
               </div>
             </div>
             <div>
-              <h6 className="mb-2 text-[#0c5b47] font-medium text-xl">
-                Wedding Flower
+              <h6 className="mb-2 text-gray-800 font-medium text-xl">
+                Expert Florists
               </h6>
-              <p className="text-sm text-gray-600 font-normal">
-                The first mate and his Skipper too will do their very best to
-                make the others comfortable in their tropic island nest. Michael
-                Knight a young loner.
+              <p className="text-sm text-[#0c5b47] font-normal">
+                Our team of skilled florists combines creativity and expertise
+                to design captivating floral masterpieces that exceed your expectations.
               </p>
               {/* <hr className="w-full my-6 border-pink-300" /> */}<br />
             </div>
           </div>
           <div className="flex">
             <div className="">
-              <div className="flex items-center justify-center w-10 h-10 mb-3 rounded-full text-gray-600">
+              <div className="flex items-center justify-center w-10 h-10 mb-3 rounded-full text-[#0c5b47]">
                 <i class="fa-duotone fa-flower-daffodil"></i>
               </div>
             </div>
             <div>
-              <h6 className="mb-2 text-[#0c5b47] font-medium text-xl">
-                Birthday Flower
+              <h6 className="mb-2 text-gray-800 font-medium text-xl">
+                Wide Selection
               </h6>
-              <p className="text-sm text-gray-600 font-normal">
-                The first mate and his Skipper too will do their very best to
-                make the others comfortable in their tropic island nest. Michael
-                Knight a young loner.
+              <p className="text-sm text-[#0c5b47] font-normal">
+                Explore our diverse range of flowers, including classic roses, exotic orchids,
+                vibrant lilies, and more, to find the perfect blooms for any occasion.
               </p>
               {/* <hr className="w-full my-6 border-pink-300" /> */}<br />
             </div>
           </div>
           <div className="flex">
             <div className="">
-              <div className="flex items-center justify-center w-10 h-10 mb-3 rounded-full text-gray-600">
+              <div className="flex items-center justify-center w-10 h-10 mb-3 rounded-full text-[#0c5b47]">
                 <i class="fa-duotone fa-flower-daffodil"></i>
               </div>
             </div>
             <div>
-              <h6 className="mb-2 text-[#0c5b47] font-medium text-xl">
-                Valentine Flower
+              <h6 className="mb-2 text-gray-800 font-medium text-xl">
+                Customization
               </h6>
-              <p className="text-sm text-gray-600 font-normal">
-                Chase ball of string eat plants, meow, and throw up because I
-                ate plants going to catch the red dot today going to catch the
-                red dot today. I could pee on this if I had the energy.
+              <p className="text-sm text-[#0c5b47] font-normal">
+                Looking for something unique? We offer customizable arrangements tailored to your preferences and budget, ensuring a personalized touch every time.
               </p>
             </div>
           </div>

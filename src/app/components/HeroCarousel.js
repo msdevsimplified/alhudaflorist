@@ -21,7 +21,7 @@ export default function HeroCarousel() {
                 style={{
                     '--swiper-navigation-color': '#fff',
                     '--swiper-pagination-color': '#fff',
-                    height: '70vh'
+                    height: '80vh'
                 }}
                 speed={600}
                 scrollbar={true}
@@ -40,11 +40,13 @@ export default function HeroCarousel() {
                     slot="container-start"
                     className="parallax-bg"
                     data-swiper-parallax="-23%"
-                ><NavBar/></div>
-                <SwiperSlide className="bg-no-repeat relative object-cover bg-cover bg-center bg-[url('https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/h3-slider-background-3.jpg')]">
+                >
+                    <NavBar />
+                </div>
+                <SwiperSlide className="bg-no-repeat relative bg-cover bg-origin-content bg-[url('https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/h3-slider-background-3.jpg')]">
                     <div className="w-full center-div h-screen">
                         <div className="flex flex-col justify-center h-auto gap-5">
-                            <div className="parisienne-regular text-8xl text-[#0c5b47] font-black" data-swiper-parallax="-300">
+                            <div className="parisienne-regular text-6xl md:text-8xl text-[#0c5b47] font-black" data-swiper-parallax="-300">
                                 Wedding Flowers
                             </div>
 

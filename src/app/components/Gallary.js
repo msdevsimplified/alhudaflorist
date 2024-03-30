@@ -1,6 +1,6 @@
 const Gallary = () => {
     return (
-        <section className="text-gray-600 bg-white body-font">
+        <section className="text-gray-600 bg-white body-font px-10">
             <div className="container py-24 mx-auto flex flex-wrap justify-center">
                 <div className="max-w-xl flex flex-col justify-center items-center text-center mb-2 md:mx-auto sm:text-center lg:max-w-2xl md:mb-4">
                     <div className="text-center">

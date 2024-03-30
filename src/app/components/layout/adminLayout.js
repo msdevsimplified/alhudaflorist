@@ -2,7 +2,11 @@ import NavBar from "../Nav";
 
 export default function AdminLayout({ children }) {
     return (
-        <div classNameName="min-h-[100vh]">
+        <html>
+            <head></head>
+           <body className="bg-white">
+           <main className="bg-white">
+            <div classNameName="min-h-[100vh]">
             <NavBar />
             <div className="container w-full flex flex-wrap mx-auto">
                 <div className="w-full md:min-h-[90vh] pb-4 h-auto bg-[#FFF0E9] lg:w-1/5 px-6 text-xl text-gray-800 leading-normal">
@@ -30,7 +34,7 @@ export default function AdminLayout({ children }) {
                                 </a>
                             </li>
                             <li className="py-1 md:my-2 hover:bg-[#FFF0E9] lg:hover:bg-transparent border-transparent">
-                                <a href='#section3'
+                                <a href='/auth/reset_password'
                                     className="block pl-4 align-middle text-gray-700 no-underline hover:text-yellow-600">
                                     <span className="pb-1 md:pb-0 text-sm">Change password</span>
                                 </a>
@@ -45,5 +49,8 @@ export default function AdminLayout({ children }) {
 
             </div>
         </div>
+            </main>
+           </body>
+        </html>
     )
 }

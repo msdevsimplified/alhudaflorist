@@ -4,6 +4,7 @@ import Gallary from "./components/Gallary";
 import Header from "./components/Header";
 import OurStory from "./components/OurStory";
 import { Tabs } from "./components/TabComponents/tabs";
+import Pricing from "./components/pricing";
 
 export default function Home() {
 
@@ -11,7 +12,8 @@ export default function Home() {
     <main className="">
       <Header />
       <OurStory />
-      <div className="bg-white">
+      <Pricing/>
+      <div className="bg-white pt-16">
         <div className="max-w-xl flex flex-col justify-center mb-2 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
           <div>
             <p className="parisienne-regular px-3 py-px mb-4 text-3xl text-center font-semibold tracking-wider text-[#0c5b47] rounded-full bg-teal-accent-400">

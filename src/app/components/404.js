@@ -11,9 +11,9 @@ export default function Custom404() {
 
 
 			</head>
-			<body>
+			<body className="bg-white m-0">
 
-				<div id="notfound">
+				<div id="notfound" className="bg-white">
 					<div className="notfound">
 						<div className="notfound-404"></div>
 						<h1>404</h1>

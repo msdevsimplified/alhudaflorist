@@ -42,7 +42,7 @@ const ContactFrom = () => {
     };
     return (
         <section className="bg-white">
-            <div className="container px-12 py-12 mx-auto">
+            <div className="container px-8 py-12 mx-auto">
                 <div className=" w-[80%]">
                     <p className="font-medium text-gray-800">Contact us</p>
                     <p className="mt-3 text-gray-500">At Alhuda Florist, we understand that every flower tells a story, and we are honored to be a part of your cherished moments. Whether you&apos;re expressing joy, love, gratitude, or sympathy, our mission is to create unforgettable floral experiences that leave a lasting impression.</p>
