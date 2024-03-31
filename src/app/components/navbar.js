@@ -1,31 +1,8 @@
-"use client"
 import React from 'react';
-import ReactWhatsapp from 'react-whatsapp';
 
-const Header = () => {
-    const toggleMobileMenu = () => {
-        const hamburger = document.querySelector('#hamburger');
-        const navbar = document.querySelector('#navbar');
-
-        hamburger.querySelector('#line').classNameList.toggle('rotate-45');
-        hamburger.querySelector('#line').classNameList.toggle('translate-y-1.5');
-        hamburger.querySelector('#line2').classNameList.toggle('-rotate-45');
-        hamburger.querySelector('#line2').classNameList.toggle('-translate-y-1');
-
-        if (navbar.clientHeight === 0) {
-            navbar.style.paddingTop = '20px';
-            navbar.style.paddingBottom = '20px';
-            navbar.style.height = `${parseInt(navbar.scrollHeight) + 60}px`;
-        } else {
-            navbar.style.height = '0px';
-            navbar.style.paddingTop = '0px';
-            navbar.style.paddingBottom = '0px';
-        }
-    };
-
+function Navbar(props) {
     return (
-        <div className="relative w-full bg-white bg-no-repeat bg-cover bg-center bg-[url('https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/h3-slider-background-3.jpg')]">
-            <nav className="w-full bg-transparent">
+        <nav className="bg-gray-50">
                 <div className="container m-auto px-6 md:px-12 lg:px-7">
                     <div className="flex flex-wrap items-center justify-between py-6 gap-6 md:py-4 md:gap-0 relative">
                         <input type="checkbox" name="toggle_nav" id="toggle_nav" className="peer hidden" />
@@ -36,7 +13,7 @@ const Header = () => {
                             </a>
 
                             <div className="flex items-center md:hidden max-h-10">
-                                <label role="button" htmlFor="toggle_nav" aria-label="humburger" id="hamburger" className="relative z-40 px-2 py-3 sm:-mr-6">
+                                <label role="button" for="toggle_nav" aria-label="humburger" id="hamburger" className="relative z-40 px-2 py-3 sm:-mr-6">
                                     <div id="line"
                                         className="m-auto h-0.5 w-6 rounded bg-sky-900 transition duration-300"></div>
                                     <div id="line2"
@@ -55,8 +32,7 @@ const Header = () => {
                             md:left-0 md:h-auto w-4/5 md:max-w-none md:relative lg:first-letter:top-0">
                             <div className="flex md:hidden w-full pb-5">
                                 <a href="#" aria-label="logo">
-                                    <h1 className='text-2xl font-bold'>Alhudaflorist</h1>
-                                    {/* <img src="images/logo.svg" className="w-36 grayscale contrast-200" alt="tailus logo" width="144" height="68" /> */}
+                                    <img src="images/logo.svg" className="w-36 grayscale contrast-200" alt="tailus logo" width="144" height="68" />
                                 </a>
                             </div>
                             <div className="block w-full h-full md:h-auto">
@@ -104,45 +80,7 @@ const Header = () => {
                     </div>
                 </div>
             </nav>
-            <div className="h-auto w-full flex flex-col">
-                <div className="container m-auto pb-4 px-6 sm:pt-16 sm:pb-8 md:px-12 lg:px-6">
-                    <div className="flex items-center flex-wrap gap-12 lg:gap-0">
-                        <div className="lg:w-5/12 space-y-8">
-                            <span className="flex space-x-2">
-                                <span className="block w-14 mb-2 border-b-2 border-gray-600"></span>
-                                <span className="font-medium text-gray-600">New this summer</span>
-                            </span>
-                            <h1 className="text-4xl font-bold md:text-5xl">Your Oasis of <span className='text-gray-800'>Floral</span> Delights in the Heart of the UAE!</h1>
-                            <p className="text-xl text-gray-700">Elevate Every Occasion with Our Handcrafted Bouquets and Arrangements.</p>
-
-                            <div className="flex space-x-4">
-                                <button type="button" title="Start buying" className="w-full max-w-sm py-3 px-6 text-center transition bg-gray-900 hover:bg-gray-800 active:bg-gray-700 focus:bg-gray-800 sm:w-max">
-                                    <span className="block text-white text-nowrap font-semibold">
-                                        Explore now
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="hidden sm:flex bottom-8 w-full">
-                    <div className="container sm:flex-row sm:items-center sm:justify-between py-4 gap-4 m-auto px-6 flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between md:px-12 lg:px-7">
-                        <a href="" className="space-x-4 sm:flex md:items-center">
-                            <img className="w-14 h-14 rounded-full object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKORutUEVkdtnSfhP8dvTy3wgaNuVvwxX3bbVQJcxCkg&s" alt="" />
-                            <div className="text-gray-600">
-                                <span className="text-sm">Question ?&nbsp;</span>
-                                <ReactWhatsapp number="+971 56 464 8961" className='text-base text-[#0c5b47] cursor-pointer my-2' message="Hello World!!!" >Talk to our CEO</ReactWhatsapp>
-                            </div>
-                        </a>
-                        <div>
-                            <a href="#" className="hover:text-yellow-700"><i class="fa-brands text-xl fa-facebook fa-fw"></i> </a>
-                            <a href="#" className="hover:text-yellow-700"><i class="fa-brands text-xl fa-instagram fa-fw"></i> </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
+    );
 }
 
-export default Header;
+export default Navbar;

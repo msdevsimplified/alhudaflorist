@@ -1,10 +1,10 @@
 import Footer from "../Footer"
-import NavBar from "../Nav"
+import Navbar from "../navbar"
 
 const PageLayout = ({ children }) => {
     return (
         <>
-            <NavBar />
+            <Navbar />
             {children}
             <Footer />
         </>

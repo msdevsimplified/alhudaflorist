@@ -11,7 +11,7 @@ export const Tabs = ({ tabData, listing }) => {
     <div className="flex flex-col justify-center items-center">
       <div className="w-full px-8">
         <ul
-          className="flex mb-0 p list-none gap-8 flex-wrap pt-3 flex-row justify-start"
+          className="flex mb-0 p list-none gap-6 flex-wrap pt-3 flex-row justify-center sm:justify-start"
           role="tablist"
         >
           {tabData.map((tab, i) => (

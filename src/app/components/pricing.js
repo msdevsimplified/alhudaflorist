@@ -25,7 +25,7 @@ function Pricing(props) {
                         <div>
                             <div className="relative flex justify-around">
                                 <div className="flex items-end">
-                                    <span className="leading-0 text-8xl font-bold text-gray-800">35</span>
+                                    <span className="leading-0 text-8xl font-bold text-gray-800">20</span>
                                     <div className="pb-2">
                                         <span className="block text-2xl font-bold text-rose-800">%</span>
                                         <span className="block text-xl font-bold text-primary">Off</span>
@@ -48,7 +48,7 @@ function Pricing(props) {
                             </li>
                         </ul>
                         <p
-                            className="mt-6 flex items-center justify-center  text-center text-lg text-gray-600"
+                            className="mt-6 flex flex-col sm:flex-row items-center justify-center  text-center text-lg text-gray-600"
                         >
                             <span>Call us at &nbsp;</span>
                             <a href="tel:+24300" className="flex items-center text-primary">
@@ -64,7 +64,7 @@ function Pricing(props) {
                                 </svg>
                                 <span className="font-semibold">+971 56 464 8961</span>
                             </a>
-                            
+
                         </p>
                         <p className='text-center mt-4'> OR</p>
                         <ReactWhatsapp number="+971 56 464 8961" className='relative text-white flex h-11 w-full bg-[#0c5b47] rounded-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95' message="Hello World!!!" ><i className="fa-brands fa-whatsapp"></i> &nbsp; Whatsapp</ReactWhatsapp>

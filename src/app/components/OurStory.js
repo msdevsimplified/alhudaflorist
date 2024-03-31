@@ -1,7 +1,7 @@
 
 export default function OurStory() {
   return (
-    <div className="px-4 bg-[#fff] py-24 mx-auto max-w-full lg:pb-24">
+    <div className="px-4 bg-[#fff] py-20 mx-auto max-w-full lg:pb-24">
       <div className="flex flex-col justify-center items-center mb-2 md:mx-auto sm:text-center md:mb-24">
         <div>
           <p className="inline-block parisienne-regular px-3 py-px mb-4 text-3xl font-semibold tracking-wider text-[#0c5b47] rounded-full bg-teal-accent-400">
