@@ -1,3 +1,5 @@
+import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 function Navbar(props) {
@@ -7,10 +9,10 @@ function Navbar(props) {
                     <div className="flex flex-wrap items-center justify-between py-6 gap-6 md:py-4 md:gap-0 relative">
                         <input type="checkbox" name="toggle_nav" id="toggle_nav" className="peer hidden" />
                         <div className="w-full flex justify-between md:w-max md:px-0">
-                            <a href="#" aria-label="logo">
+                            <Link href="/" aria-label="logo">
                                 <h1 className='text-2xl font-bold'>Alhudaflorist</h1>
                                 {/* <img src="images/logo.svg" className="w-36 grayscale contrast-200" alt="tailus logo" width="144" height="68" /> */}
-                            </a>
+                            </Link>
 
                             <div className="flex items-center md:hidden max-h-10">
                                 <label role="button" for="toggle_nav" aria-label="humburger" id="hamburger" className="relative z-40 px-2 py-3 sm:-mr-6">
@@ -31,35 +33,35 @@ function Navbar(props) {
                             md:bg-transparent lg:w-7/12 fixed top-0 -left-full transition-all duration-500 peer-checked:left-0 max-w-sm h-full 
                             md:left-0 md:h-auto w-4/5 md:max-w-none md:relative lg:first-letter:top-0">
                             <div className="flex md:hidden w-full pb-5">
-                                <a href="#" aria-label="logo">
-                                    <img src="images/logo.svg" className="w-36 grayscale contrast-200" alt="tailus logo" width="144" height="68" />
-                                </a>
+                                <Link href="/" aria-label="logo">
+                                    <Image src="images/logo.svg" className="w-36 grayscale contrast-200" alt="tailus logo" width={144} height={144} />
+                                </Link>
                             </div>
                             <div className="block w-full h-full md:h-auto">
                                 <ul className="space-y-8 tracking-wide font-medium md:flex md:space-y-0">
                                     <li>
-                                        <a href="#" className="block md:px-3">
+                                        <Link href="#" className="block md:px-3">
                                             <div className="relative text-yellow-800
                                                 before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800">
                                                 <span>Home</span>
                                             </div>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#" className="block md:px-3 group">
+                                        <Link href="about" className="block md:px-3 group">
                                             <div className="relative text-gray-600
                                                 before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800 before:transition before:scale-x-0 group-hover:before:scale-x-100">
                                                 <span className="transition group-hover:text-yellow-700">About</span>
                                             </div>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="contact" className="block md:px-3 group">
+                                        <Link href="contact" className="block md:px-3 group">
                                             <div className="relative text-gray-600
                                                 before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800 before:transition before:scale-x-0 group-hover:before:scale-x-100">
                                                 <span className="transition group-hover:text-yellow-700">Contact</span>
                                             </div>
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>

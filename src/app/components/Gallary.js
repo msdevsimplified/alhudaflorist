@@ -17,7 +17,7 @@ const Gallary = () => {
 
                         <div className="max-w-screen-xl mx-auto bg-transparent">
                             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 md:gap-0 lg:grid-rows-2">
-                                <div className="relative flex items-end justify-start w-full text-left bg-center bg-cover cursor-pointer h-96 md:col-span-2 lg:row-span-2 lg:h-full group bg-[url('https://loveflowersmiami.com/wp-content/uploads/2023/03/Bridal-Wedding-Cascade-Calla-Lillies-Phalaenopsis-Dendrobium-and-Cymbidium-Orchids-and-Roses-1-1024x1024.jpg')] dark:bg-gray-500">
+                                <div className="relative flex items-end justify-start w-full text-left bg-center bg-cover cursor-pointer h-96 md:col-span-2 lg:row-span-2 lg:h-full group bg-[url('https://cdn.shopify.com/s/files/1/0589/7879/5673/products/HYDE_SEEDBridalTo-goROSES_PHALAENOPSIS.jpg?v=1672590625')] dark:bg-gray-500">
                                     <div className="absolute top-0 bottom-0 left-0 right-0 dark:via-transparent dark:from-gray-900 dark:to-gray-900"></div>
                                     <div className="absolute top-0 left-0 right-0 flex items-center justify-between mx-5 mt-3">
                                         <a rel="noopener noreferrer" href="#" className="px-3 py-2 text-xs font-semibold tracki uppercase hover:underline bg-[#E6BE8A] text-black">Luxury</a>
@@ -78,63 +78,7 @@ const Gallary = () => {
                                     </h2>
                                 </div>
                             </div>
-                        </div>
-
-                        {/* <div class=" w-full grid md:grid-cols-4 gap-4 md:gap-6 ">
-                          
-                            <a href="#" class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
-                                <img src="https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/gallery-img-3.jpg" loading="lazy" alt="Photo by Minh Pham" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-
-                                <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
-
-                                <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">VR</span>
-                            </a>
-                            <a href="#" class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
-                                <img src="https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/gallery-img-4.jpg" loading="lazy" alt="Photo by Minh Pham" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-
-                                <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
-
-                                <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">VR</span>
-                            </a>
-    
-
-                          
-                            <a href="#" class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
-                                <img src="https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/h1-img-1.jpg" loading="lazy" alt="Photo by Magicle" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-
-                                <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
-
-                                <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Tech</span>
-                            </a>
-                          
-
-                          
-                            <a href="#" class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
-                                <img src="https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/port-img-9-550x550.jpg" loading="lazy" alt="Photo by Martin Sanchez" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-
-                                <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
-
-                                <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Dev</span>
-                            </a>
-                          
-
-                          
-                            <a href="#" class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
-                                <img src="https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/h2-gallery-img-2.jpg" loading="lazy" alt="Photo by Lorenzo Herrera" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-
-                                <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
-
-                                <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Retro</span>
-                            </a>
-                            <a href="#" class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
-                                <img src="https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/gallery-img-3.jpg" loading="lazy" alt="Photo by Lorenzo Herrera" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-
-                                <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
-
-                                <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Retro</span>
-                            </a>
-                          
-                        </div> */}
+                        </div>                     
                     </div>
                 </div>
             </div>

@@ -36,12 +36,12 @@ export default function SettingsPage() {
 
     };
     return (
-        <section className="">
-            <div className="py-8 mx-auto w-full px-4 lg:px-8 lg:py-8">
+        <section className="w-full px-6">
+            <div className="w-full px-4">
                 <h2 className="mb-2 py-2 text-xl font-bold text-gray-700">Settings</h2>
-                <hr className="bg-black"/>
+                <hr className="bg-black" />
                 <div className="flex py-4 gap-4 flex-row items-start justify-between">
-                    
+
                     <div className="w-1/3">
                         <h2 className="text-xl font-semibold text-gray-700">General</h2>
                         <p className="text-sm text-gray-700">Fill this form for your site general settings.</p>

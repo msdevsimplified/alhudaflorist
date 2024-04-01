@@ -1,4 +1,6 @@
 "use client"
+import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import ReactWhatsapp from 'react-whatsapp';
 
@@ -30,10 +32,10 @@ const Header = () => {
                     <div className="flex flex-wrap items-center justify-between py-6 gap-6 md:py-4 md:gap-0 relative">
                         <input type="checkbox" name="toggle_nav" id="toggle_nav" className="peer hidden" />
                         <div className="w-full flex justify-between md:w-max md:px-0">
-                            <a href="#" aria-label="logo">
+                            <Link href="/" aria-label="logo">
                                 <h1 className='text-2xl font-bold'>Alhudaflorist</h1>
                                 {/* <img src="images/logo.svg" className="w-36 grayscale contrast-200" alt="tailus logo" width="144" height="68" /> */}
-                            </a>
+                            </Link>
 
                             <div className="flex items-center md:hidden max-h-10">
                                 <label role="button" htmlFor="toggle_nav" aria-label="humburger" id="hamburger" className="relative z-40 px-2 py-3 sm:-mr-6">
@@ -54,36 +56,36 @@ const Header = () => {
                             md:bg-transparent lg:w-7/12 fixed top-0 -left-full transition-all duration-500 peer-checked:left-0 max-w-sm h-full 
                             md:left-0 md:h-auto w-4/5 md:max-w-none md:relative lg:first-letter:top-0">
                             <div className="flex md:hidden w-full pb-5">
-                                <a href="#" aria-label="logo">
+                                <Link href="/" aria-label="logo">
                                     <h1 className='text-2xl font-bold'>Alhudaflorist</h1>
                                     {/* <img src="images/logo.svg" className="w-36 grayscale contrast-200" alt="tailus logo" width="144" height="68" /> */}
-                                </a>
+                                </Link>
                             </div>
                             <div className="block w-full h-full md:h-auto">
                                 <ul className="space-y-8 tracking-wide font-medium md:flex md:space-y-0">
                                     <li>
-                                        <a href="#" className="block md:px-3">
+                                        <Link href="/" className="block md:px-3">
                                             <div className="relative text-yellow-800
                                                 before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800">
                                                 <span>Home</span>
                                             </div>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#" className="block md:px-3 group">
-                                            <div className="relative text-gray-600
+                                        <Link href="about" className="block md:px-3 group">
+                                            <div className="relative text-[#1b745e]
                                                 before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800 before:transition before:scale-x-0 group-hover:before:scale-x-100">
                                                 <span className="transition group-hover:text-yellow-700">About</span>
                                             </div>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="contact" className="block md:px-3 group">
-                                            <div className="relative text-gray-600
+                                        <Link href="contact" className="block md:px-3 group">
+                                            <div className="relative text-[#1b745e]
                                                 before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800 before:transition before:scale-x-0 group-hover:before:scale-x-100">
                                                 <span className="transition group-hover:text-yellow-700">Contact</span>
                                             </div>
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
@@ -105,7 +107,7 @@ const Header = () => {
                 </div>
             </nav>
             <div className="h-auto w-full flex flex-col">
-                <div className="container m-auto pb-4 px-6 sm:pt-16 sm:pb-8 md:px-12 lg:px-6">
+                <div className="container m-auto pb-4 px-6 sm:pt-16 sm:pb-8 md:px-8 lg:px-10">
                     <div className="flex items-center flex-wrap gap-12 lg:gap-0">
                         <div className="lg:w-5/12 space-y-8">
                             <span className="flex space-x-2">
@@ -127,16 +129,16 @@ const Header = () => {
                 </div>
                 <div className="hidden sm:flex bottom-8 w-full">
                     <div className="container sm:flex-row sm:items-center sm:justify-between py-4 gap-4 m-auto px-6 flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between md:px-12 lg:px-7">
-                        <a href="" className="space-x-4 sm:flex md:items-center">
-                            <img className="w-14 h-14 rounded-full object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKORutUEVkdtnSfhP8dvTy3wgaNuVvwxX3bbVQJcxCkg&s" alt="" />
+                        <Link href="" className="space-x-4 sm:flex md:items-center">
+                            <Image className="w-14 h-14 rounded-full object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKORutUEVkdtnSfhP8dvTy3wgaNuVvwxX3bbVQJcxCkg&s" alt="Alhuda florist customer support" width={0} height={0} style={{ width: '56px', height: '56px' }} />
                             <div className="text-gray-600">
                                 <span className="text-sm">Question ?&nbsp;</span>
                                 <ReactWhatsapp number="+971 56 464 8961" className='text-base text-[#0c5b47] cursor-pointer my-2' message="Hello World!!!" >Talk to our CEO</ReactWhatsapp>
                             </div>
-                        </a>
+                        </Link>
                         <div>
-                            <a href="#" className="hover:text-yellow-700"><i class="fa-brands text-xl fa-facebook fa-fw"></i> </a>
-                            <a href="#" className="hover:text-yellow-700"><i class="fa-brands text-xl fa-instagram fa-fw"></i> </a>
+                            <Link href="#" className="hover:text-yellow-700"><i class="fa-brands text-xl fa-facebook fa-fw"></i> </Link>
+                            <Link href="#" className="hover:text-yellow-700"><i class="fa-brands text-xl fa-instagram fa-fw"></i> </Link>
                         </div>
                     </div>
                 </div>

@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { Modal } from 'react-responsive-modal';
@@ -33,7 +34,8 @@ export const Card = (props) => {
                     <img
                         src={props.product.images}
                         alt="Product"
-                        className="h-80 w-full object-cover"
+                        className="w-full h-80 object-cover"
+                        
                     />
                     <div className="px-4 pt-2 w-auto relative font-['Poppins'] text-[#0c5b47] text-center">
 
@@ -79,10 +81,11 @@ export const Card = (props) => {
             </div>
             <Modal open={open} onClose={onCloseModal} center>
                 <div className=''>
-                    <img
+                    <Image
                         src="https://urbanmeadowflowers.com.sg/cdn/shop/products/Urban-Meadow-Flowers-Small-Vase-1-MR_450x450.jpg?v=1647417608"
                         alt="Product"
                         className="w-full object-cover"
+                        width={0} height={0} style={{ width: '100%', height: 'auto' }}
                     />
                 </div>
             </Modal>
