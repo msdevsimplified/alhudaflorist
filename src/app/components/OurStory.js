@@ -5,12 +5,11 @@ export default function OurStory() {
       <div className="flex flex-col justify-center items-center mb-2 md:mx-auto sm:text-center md:mb-24">
         <div>
           <p className="inline-block parisienne-regular px-3 py-px mb-4 text-3xl font-semibold tracking-wider text-[#0c5b47] rounded-full bg-teal-accent-400">
-          Why Choose Us
+            Why Choose Us
           </p>
         </div>
-        <h2 className="max-w-lg mb-6  text-3xl font-medium leading-none tracking-tight text-[#0c5b47] sm:text-4xl md:mx-auto">
-
-          Perfect Florist Spot
+        <h2 className="max-w-lg mb-6 text-3xl font-bold leading-none tracking-tight text-[#E6BE8A] sm:text-4xl md:mx-auto">
+          Perfect florist spot
         </h2>
       </div>
       <div className="grid gap-8 lg:grid-cols-2 sm:mx-auto">

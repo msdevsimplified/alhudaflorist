@@ -9,7 +9,8 @@ const Footer = () => {
 
                 <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
                     <div className="text-center sm:text-left">
-                        <h3 className="text-base font-medium uppercase text-[#18181F] ">alhudaflorist</h3>
+                        {/* <h3 className="text-base font-medium uppercase text-[#18181F] ">alhudaflorist</h3> */}
+                        <img src="/assets/Samira.png" className="w-36 grayscale contrast-200" alt="tailus logo" width="144" height="68" />
                         <p className='text-[#0c5b47]/80 transition hover:text-[#18181F]/75 mt-8'>At Alhudaflorist, we&apos;re passionate about delivering the freshest and most beautiful flowers to our customers across the UAE</p>
                         <div className="mt-10">
                     

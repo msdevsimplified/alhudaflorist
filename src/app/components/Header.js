@@ -33,8 +33,8 @@ const Header = () => {
                         <input type="checkbox" name="toggle_nav" id="toggle_nav" className="peer hidden" />
                         <div className="w-full flex justify-between md:w-max md:px-0">
                             <Link href="/" aria-label="logo">
-                                <h1 className='text-2xl font-bold'>Alhudaflorist</h1>
-                                {/* <img src="images/logo.svg" className="w-36 grayscale contrast-200" alt="tailus logo" width="144" height="68" /> */}
+                                {/* <h1 className='text-2xl font-bold'>Alhudafloristt</h1> */}
+                                <img src="assets/Samira.png" className="w-36 grayscale contrast-200" alt="tailus logo" width="144" height="68" />
                             </Link>
 
                             <div className="flex items-center md:hidden max-h-10">
@@ -91,16 +91,16 @@ const Header = () => {
                             </div>
 
                             <div className="w-full gap-y-4 md:w-max md:gap-y-0 md:gap-x-4 flex md:flex-row flex-col">
-                                <button type="button" title="Start buying" className="group w-full py-3 px-6 text-center transition active:bg-yellow-200 focus:bg-yellow-100 sm:w-max">
+                                {/* <Link href="/auth/login"  title="Start buying" className="group w-full py-3 px-6 text-center transition active:bg-yellow-200 focus:bg-yellow-100 sm:w-max">
                                     <span className="block text-gray-700 font-semibold group-focus:text-yellow-700">
                                         Login
                                     </span>
-                                </button>
-                                <button type="button" title="Start buying" className="w-full py-3 px-6 text-center transition bg-gray-900 hover:bg-gray-800 active:bg-gray-700 focus:bg-gray-800 md:w-max">
+                                </Link> */}
+                                <Link href="/auth/login" title="Start buying" className="w-full py-3 px-6 text-center transition bg-gray-900 hover:bg-gray-800 active:bg-gray-700 focus:bg-gray-800 md:w-max">
                                     <span className="block text-white font-semibold">
-                                        Shop now
+                                        Login
                                     </span>
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </div>

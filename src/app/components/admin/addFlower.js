@@ -43,8 +43,8 @@ export default function AddFlowers() {
     };
     return (
         <section className="">
-            <div className="py-8 px-4 mx-auto max-w-2xl lg:py-8">
-                <h2 className="mb-8 py-4 text-xl font-bold text-gray-900">Add a new flowers</h2>
+            <div className=" px-4 mx-auto max-w-2xl ">
+                <h2 className="mb-8 text-xl font-bold text-gray-900">Add flowers</h2>
                 <Formik
                     initialValues={initialValues}
                     validationSchema={validationSchema}
@@ -101,7 +101,6 @@ export default function AddFlowers() {
                                 <label htmlFor="section" className="block mb-2 text-sm font-medium text-gray-900">Section for</label>
                                 <Field as="select" id="section" name="section" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5">
                                     <option selected="">Select category</option>
-                                    <option value="slider">Slider</option>
                                     <option value="favourite">Our Favourites</option>
                                     <option value="gallery">Gallery of works</option>
                                     <option value="services">Services</option>
@@ -115,7 +114,7 @@ export default function AddFlowers() {
 
                             <div className="sm:col-span-2">
                                 <label htmlFor="description" className="block mb-2 text-sm font-medium text-gray-900">Description</label>
-                                <Field as="textarea" id="description" name="description" rows="8" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500" placeholder="Your description here"></Field>
+                                <Field as="textarea" id="description" name="description" rows="8" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500" placeholder="Flower description here"></Field>
                             </div>
                             <ErrorMessage
                                 name="description"

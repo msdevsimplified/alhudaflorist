@@ -44,7 +44,7 @@ const Register = () => {
                 setError("Email already exist");
             } else {
                 // Handle other errors
-                console.log("Error creating user with account: ", error.response);
+                console.log("Error creating user with accountss: ", error);
                 setError("An error occurred");
             }
         }

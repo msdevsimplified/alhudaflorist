@@ -38,7 +38,7 @@ const Login = () => {
     return (
 
         <PageLayout>
-            <div className="relative py-16">
+            <div className="relative py-16 bg-white">
                 <div className="container relative m-auto px-6 text-gray-500 md:px-12 xl:px-40">
                     <div className="m-auto space-y-8 md:w-8/12 lg:w-6/12 xl:w-6/12">
                         <div className="rounded-3xl border border-[#E6BE8A] bg-white shadow-2xl shadow-gray-600/10 backdrop-blur-2xl">
@@ -94,7 +94,7 @@ const Login = () => {
                                         </button>
                                         <p class="border-t border-gray-100 dark:border-gray-700 pt-6 text-sm text-gray-500 dark:text-gray-400">
                                             Don&apos;t have an account ?
-                                            <a href="register" class="text-blue-400">Sign up</a>
+                                            <a href="register" class="text-blue-400"> Sign up</a>
                                         </p>
                                     </Form >
                                 </Formik>

@@ -8,6 +8,7 @@ export const metadata = {
 
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
       <head>
@@ -52,7 +53,9 @@ export default function RootLayout({ children }) {
 
       </head>
       <AuthProvider>
-        <body className="px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-8">{children}</body>
+        <body className="px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-8">
+          {children}
+        </body>
       </AuthProvider>
     </html>
   );

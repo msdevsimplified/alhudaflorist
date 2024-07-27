@@ -5,9 +5,23 @@ import { PrismaAdapter } from "@auth/prisma-adapter";
 import bcrypt from 'bcryptjs';
 import prisma from "@/lib/prisma";
 
+import { Prisma } from '@prisma/client';
+import { error } from "console";
 
+if (error instanceof Prisma.PrismaClientKnownRequestError) {
+  console.log(error)
+}
 export const options = {
   adapter: PrismaAdapter(prisma),
+  // callbacks: {
+  //   async jwt({ token, user }) {
+  //     return { ...token, ...user };
+  //   },
+  //   async session({ session, token, user }) {
+  //     session.user = token;
+  //     return session;
+  //   },
+  // },
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,

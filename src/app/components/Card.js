@@ -19,6 +19,7 @@ export const Card = (props) => {
             <div
                 key={props.index}
                 className="  group relative transition duration-500 transform hover:scale-100"
+                onClick={onOpenModal}
                 onMouseEnter={() =>
                     setHoverStates((prev) =>
                         prev.map((state, i) => (i === props.index ? true : state))
@@ -32,10 +33,10 @@ export const Card = (props) => {
             >
                 <a href="#" className=''>
                     <img
-                        src={props.product.images}
+                        src={props.product.image}
                         alt="Product"
                         className="w-full h-80 object-cover"
-                        
+
                     />
                     <div className="px-4 pt-2 w-auto relative font-['Poppins'] text-[#0c5b47] text-center">
 
@@ -44,7 +45,7 @@ export const Card = (props) => {
                             {/* Flowr title */}
                         </p>
                         {
-                           ! hoverStates[props.index] ? (
+                            !hoverStates[props.index] ? (
                                 <p className="text-base text-[#0c5b47] cursor-auto my-2">
                                     {props.product.price} AED
                                 </p>
@@ -64,25 +65,15 @@ export const Card = (props) => {
                         } absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all ease-in-out w-full justify-center gap-2`}
                 >
                     <div title='View Product' className="p-6 w-6 hover:bg-[#FFF0E9] cursor-pointer text-gray-400 hover:text-gray-800 transition ease-in duration-300 h-6 flex rounded-full text-sm justify-center items-center bg-[#FFF0E9] shadow-xl">
-                        <i
-                            onClick={onOpenModal}
-                            className="fa-sharp fa-solid fa-eye"></i>
+                        <i className="fa-sharp fa-solid fa-eye"></i>
                     </div>
-                    <Link href="#" title='Add to cart' className="p-6 w-6 h-6 hover:bg-[#FFF0E9] cursor-pointer text-gray-400 hover:text-gray-800 transition ease-in duration-300 flex rounded-full justify-center items-center bg-[#FFF0E9] shadow-xl">
-                        <i className="fa-regular fa-cart-shopping text-xl"></i>
-                    </Link>
-                    <Link href="#" title='Add to wishlist' className="p-6 w-6 h-6 hover:bg-[#FFF0E9] cursor-pointer text-gray-400 hover:text-gray-800 transition ease-in duration-300 flex rounded-full justify-center items-center bg-[#FFF0E9] shadow-xl">
-                        <i className="fa-light fa-heart"></i>
-                    </Link>
-                    <Link href="#" title='Compare product' className="p-6 w-6 h-6 hover:bg-[#FFF0E9] cursor-pointer text-gray-400 hover:text-gray-800 transition ease-in duration-300 flex rounded-full justify-center items-center bg-[#FFF0E9] shadow-xl">
-                        <i className="fa-regular fa-code-compare"></i>
-                    </Link>
+
                 </div>
             </div>
             <Modal open={open} onClose={onCloseModal} center>
-                <div className=''>
-                    <Image
-                        src="https://urbanmeadowflowers.com.sg/cdn/shop/products/Urban-Meadow-Flowers-Small-Vase-1-MR_450x450.jpg?v=1647417608"
+                <div className='max-w-md'>
+                    <img
+                        src={props.product.images}
                         alt="Product"
                         className="w-full object-cover"
                         width={0} height={0} style={{ width: '100%', height: 'auto' }}

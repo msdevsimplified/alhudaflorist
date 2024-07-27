@@ -13,8 +13,8 @@ export default function Adming() {
     // }
     return (
         <html>
-            <body className="m-0 p-0 bg-white bg-none">
-                <main className=" bg-white m-0 p-0">
+            <body className="">
+                <main className="">
                     <AdminLayout>
                         <Flowers/>
                     </AdminLayout>
