@@ -60,20 +60,20 @@ git clone https://github.com/yourusername/alhudaflorist.git
 cd alhudaflorist
 ```
 ## Install Dependencies
-# For both front-end and back-end:
+For both front-end and back-end:
 ```bash
 npm install
 ```
 
 ## Environment Variables
-# Create a .env file in the root directory and add the following environment variables:
+Create a .env file in the root directory and add the following environment variables:
 ```makefile
 MONGODB_URI=your_mongodb_connection_string
 PORT=your_preferred_port
 SECRET_KEY=your_secret_key
 ```
 ## Run the Application
-# Start development application:
+Start development application:
 ```bash
 npm run dev
 ```
