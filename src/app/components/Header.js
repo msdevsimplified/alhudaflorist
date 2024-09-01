@@ -35,7 +35,6 @@ const Header = () => {
                         <input type="checkbox" name="toggle_nav" id="toggle_nav" className="peer hidden" />
                         <div className="w-full flex justify-between md:w-max md:px-0">
                             <Link href="/" aria-label="logo">
-                                {/* <h1 className='text-2xl font-bold'>Alhudafloristt</h1> */}
                                 <img src="assets/Samira.png" className="w-36 grayscale contrast-200" alt="tailus logo" width="144" height="68" />
                             </Link>
 
@@ -59,8 +58,7 @@ const Header = () => {
                             md:left-0 md:h-auto w-4/5 md:max-w-none md:relative lg:first-letter:top-0">
                             <div className="flex md:hidden w-full pb-5">
                                 <Link href="/" aria-label="logo">
-                                    <h1 className='text-2xl font-bold'>Alhudaflorist</h1>
-                                    {/* <img src="images/logo.svg" className="w-36 grayscale contrast-200" alt="tailus logo" width="144" height="68" /> */}
+                                    <img src="assets/Samira.png" className="w-36 grayscale contrast-200" alt="tailus logo" width="144" height="68" />
                                 </Link>
                             </div>
                             <div className="block w-full h-full md:h-auto">
@@ -110,42 +108,42 @@ const Header = () => {
                                             </span>
                                         </Link>
                                     ) :
-                                    (
-                                        <Link href="/auth/login" title="Start buying" className="group w-full py-3 px-6 text-center transition text-base active:bg-yellow-200 focus:bg-yellow-100 sm:w-max">
-                                            <span className="block text-[#1b745e] font-semibold group-focus:text-yellow-700">
-                                                Sign In
-                                            </span>
-                                        </Link>
-                                    )
+                                        (
+                                            <Link href="/auth/login" title="Start buying" className="group w-full py-3 px-6 text-center transition text-base active:bg-yellow-200 focus:bg-yellow-100 sm:w-max">
+                                                <span className="block text-[#1b745e] font-semibold group-focus:text-yellow-700">
+                                                    Sign In
+                                                </span>
+                                            </Link>
+                                        )
                                 }
                                 <Link href="/auth/login" title="Start buying" className="w-full py-3 px-6 text-center transition bg-gray-900 hover:bg-gray-800 active:bg-gray-700 focus:bg-gray-800 md:w-max">
                                     <span className="block text-white font-semibold">
                                         Shop Now
                                     </span>
                                 </Link>
-                                {/* <AuthButton/> */}
                             </div>
                         </div>
                     </div>
                 </div>
             </nav>
             <div className="h-auto w-full flex flex-col">
-                <div className="container m-auto pb-4 px-6 sm:pt-16 sm:pb-8 md:px-8 lg:px-10">
+                <div className="container m-auto px-6 sm:pt-4 sm:pb-6 md:px-8 lg:px-10">
                     <div className="flex items-center flex-wrap gap-12 lg:gap-0">
-                        <div className="lg:w-5/12 space-y-8">
+                        <div className="lg:w-5/12 space-y-4">
                             <span className="flex space-x-2">
                                 <span className="block w-14 mb-2 border-b-2 border-gray-600"></span>
-                                <span className="font-medium text-gray-600">New this summer</span>
+                                <span className="font-medium text-gray-600">New this season</span>
                             </span>
-                            <h1 className="text-4xl font-bold md:text-5xl">Your Oasis of <span className='text-gray-800'>Floral</span> Delights in the Heart of the UAE!</h1>
-                            <p className="text-xl text-gray-700">Elevate Every Occasion with Our Handcrafted Bouquets and Arrangements.</p>
+                            <h1 className="text-4xl font-bold md:text-5xl text-gray-800">Alhuda Florist</h1>
+                            <p className="text-3xl font-bold md:text-4xl">Your Oasis of <span className=''>Floral</span> Delights in the Heart of the UAE!</p>
+                            <p className="text-lg text-gray-700">Elevate Every Occasion with Our Handcrafted Bouquets and Arrangements.</p>
 
                             <div className="flex space-x-4">
-                                <button type="button" title="Start buying" className="w-full max-w-sm py-3 px-6 text-center transition bg-gray-900 hover:bg-gray-800 active:bg-gray-700 focus:bg-gray-800 sm:w-max">
+                                <a href='/collections' type="button" title="Start buying" className="w-full max-w-sm py-3 px-6 text-center transition bg-gray-900 hover:bg-gray-800 active:bg-gray-700 focus:bg-gray-800 sm:w-max">
                                     <span className="block text-white text-nowrap font-semibold">
                                         Explore now
                                     </span>
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -160,7 +158,7 @@ const Header = () => {
                             </div>
                         </Link>
                         <div>
-                            <Link href="#" className="hover:text-yellow-700"><i class="fa-brands text-xl fa-facebook fa-fw"></i> </Link>
+                            <Link href="https://www.facebook.com/profile.php?id=61563496229140" className="hover:text-yellow-700"><i class="fa-brands text-xl fa-facebook fa-fw"></i> </Link>
                             <Link href="#" className="hover:text-yellow-700"><i class="fa-brands text-xl fa-instagram fa-fw"></i> </Link>
                         </div>
                     </div>

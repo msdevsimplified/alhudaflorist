@@ -13,8 +13,8 @@ function Navbar(props) {
                     <input type="checkbox" name="toggle_nav" id="toggle_nav" className="peer hidden" />
                     <div className="w-full flex justify-between md:w-max md:px-0">
                         <Link href="/" aria-label="logo">
-                            {/* <h1 className='text-2xl font-bold'>Alhudaflorist</h1> */}
-                            <img src="/assets/Samira.png" className="w-36 grayscale contrast-200" alt="tailus logo" width="144" height="68" />
+                            <h1 className='text-2xl font-bold sr-only'>Alhudaflorist</h1>
+                            <img src="/assets/Samira.png" className="w-36 grayscale contrast-200" alt="Alhuda florist" width="144" height="68" />
                         </Link>
 
                         <div className="flex items-center md:hidden max-h-10">
