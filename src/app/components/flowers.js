@@ -207,9 +207,9 @@ export default function Flowers() {
 
                 <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                     {
-                        flowers.map((flower) => {
+                        flowers.map((flower, i) => {
                             return (
-                                <li>
+                                <li key={i}>
                                     <a href="#" className="group block overflow-hidden">
                                         <img
                                             src={flower.image}
