@@ -5,7 +5,7 @@ Welcome to the Alhuda Florist website repository! This repository contains the s
 ## Overview
 
 The Alhuda Florist website showcases our diverse range of flower collections, offers online ordering capabilities, and provides information about our services. This project includes both the front-end and back-end components of the website.
-# Privacy & Policy
+## Privacy & Policy
 
 The source code in this repository is made available for the following purposes:
 
@@ -105,11 +105,5 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 For any questions or support, please contact us at:
 
 -   **Email**: sahidularif1@gmail.com
-
-Follow us on social media for updates and promotions:
-
--   Facebook
--   Twitter
--   Instagram
 
 Thank you for visiting the Alhuda Florist website repository!
