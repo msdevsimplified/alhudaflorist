@@ -1,10 +1,12 @@
 "use client"
+import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import ReactWhatsapp from 'react-whatsapp';
 
 const Header = () => {
+    const { data: session } = useSession();
     const toggleMobileMenu = () => {
         const hamburger = document.querySelector('#hamburger');
         const navbar = document.querySelector('#navbar');
@@ -71,6 +73,15 @@ const Header = () => {
                                             </div>
                                         </Link>
                                     </li>
+
+                                    <li>
+                                        <Link href="collections" className="block md:px-3 group">
+                                            <div className="relative text-[#1b745e]
+                                                before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800 before:transition before:scale-x-0 group-hover:before:scale-x-100">
+                                                <span className="transition group-hover:text-yellow-700">Flowers</span>
+                                            </div>
+                                        </Link>
+                                    </li>
                                     <li>
                                         <Link href="about" className="block md:px-3 group">
                                             <div className="relative text-[#1b745e]
@@ -91,16 +102,28 @@ const Header = () => {
                             </div>
 
                             <div className="w-full gap-y-4 md:w-max md:gap-y-0 md:gap-x-4 flex md:flex-row flex-col">
-                                {/* <Link href="/auth/login"  title="Start buying" className="group w-full py-3 px-6 text-center transition active:bg-yellow-200 focus:bg-yellow-100 sm:w-max">
-                                    <span className="block text-gray-700 font-semibold group-focus:text-yellow-700">
-                                        Login
-                                    </span>
-                                </Link> */}
+                                {
+                                    session ? (
+                                        <Link href="/admin" title="Start buying" className="group w-full py-3 px-6 text-center transition active:bg-yellow-200 focus:bg-yellow-100 sm:w-max">
+                                            <span className="block text-gray-700 group-focus:text-yellow-700">
+                                                Dashboard
+                                            </span>
+                                        </Link>
+                                    ) :
+                                    (
+                                        <Link href="/auth/login" title="Start buying" className="group w-full py-3 px-6 text-center transition text-base active:bg-yellow-200 focus:bg-yellow-100 sm:w-max">
+                                            <span className="block text-[#1b745e] font-semibold group-focus:text-yellow-700">
+                                                Sign In
+                                            </span>
+                                        </Link>
+                                    )
+                                }
                                 <Link href="/auth/login" title="Start buying" className="w-full py-3 px-6 text-center transition bg-gray-900 hover:bg-gray-800 active:bg-gray-700 focus:bg-gray-800 md:w-max">
                                     <span className="block text-white font-semibold">
-                                        Login
+                                        Shop Now
                                     </span>
                                 </Link>
+                                {/* <AuthButton/> */}
                             </div>
                         </div>
                     </div>

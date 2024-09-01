@@ -8,13 +8,13 @@ import Pricing from "./components/pricing";
 import { useSession } from "next-auth/react";
 
 export default function Home() {
-  const { data: session } = useSession();
-  console.log(session)
+  // const { data: session } = useSession();
+  // console.log("session", session)
   return (
     <main className="">
       <Header />
       <OurStory />
-      <Pricing/>
+      {/* <Pricing/> */}
       <Catelog/>
       <Gallary />
       <Footer />

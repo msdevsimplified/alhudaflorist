@@ -123,7 +123,7 @@ export default function AdminLayout({ children }) {
                 </div>
 
                 <div className="-mx-6 flex items-center justify-between px-6 pt-4">
-                    <button onClick={() => signOut()} className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
+                    <button onClick={() => {signOut({callbackUrl: "/auth/login"})}} className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-6 w-6"
@@ -188,7 +188,7 @@ export default function AdminLayout({ children }) {
                                     />
                                 </div>
                             </div> */}
-                            {/* <button
+                            <button
                                 aria-label="search"
                                 className="h-10 w-10 rounded-xl border bg-gray-100 active:bg-gray-200 md:hidden"
                             >
@@ -203,7 +203,7 @@ export default function AdminLayout({ children }) {
                                         d="M35.508,31.127l-7.01-7.01a1.686,1.686,0,0,0-1.2-.492H26.156a14.618,14.618,0,1,0-2.531,2.531V27.3a1.686,1.686,0,0,0,.492,1.2l7.01,7.01a1.681,1.681,0,0,0,2.384,0l1.99-1.99a1.7,1.7,0,0,0,.007-2.391Zm-20.883-7.5a9,9,0,1,1,9-9A8.995,8.995,0,0,1,14.625,23.625Z"
                                     ></path>
                                 </svg>
-                            </button> */}
+                            </button>
                             <div className="flex items-center gap-x-3">
 
                                 <Link

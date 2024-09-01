@@ -6,8 +6,9 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import PageLayout from "@/app/components/layout/PageLayout";
+import { toast } from "react-toastify";
 
-const Login = () => {
+const Login = ({ searchParams }) => {
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState("");
 
@@ -26,14 +27,20 @@ const Login = () => {
         password: Yup.string().required("Password is required"),
     });
 
-    const handleLogin = async ({email, password}) => {
-        signIn("credentials", { email, password, redirect: false }).then( async(e)=>{
-            if(e.error){
-                setError("Invalid email/password")
-            } else{
-                router.push("/admin");
-            }
-        })
+    const handleLogin = async (data) => {
+        const result = await signIn("credentials", {
+            redirect: false,
+            email: data.email,
+            password: data.password,
+        });
+        if (!result?.ok) {
+            toast.error(result?.error);
+            setError(result.error)
+            return;
+        }
+        toast.success("Welcome To Sakura Dev Channel");
+        
+        router.push(searchParams.callbackUrl ? searchParams.callbackUrl : "/");
     };
     return (
 
@@ -44,15 +51,17 @@ const Login = () => {
                         <div className="rounded-3xl border border-[#E6BE8A] bg-white shadow-2xl shadow-gray-600/10 backdrop-blur-2xl">
                             <div className="p-8 py-12 sm:p-16">
                                 <h2 className="mb-8 text-2xl font-bold text-center text-gray-800 ">Sign in to your account</h2>
-                               {
-                                error && <span>{error}</span>
-                               }
+                                {
+                                    error && <div className="text-sm p-3 text-center bg-green-200 min-w-full ">{error}<br/></div>
+                                }
+                                <br/>
                                 <Formik
                                     initialValues={initialValues}
                                     validationSchema={validationSchema}
                                     onSubmit={handleLogin}
                                 >
                                     <Form className="space-y-8">
+                                        
                                         <div className="space-y-2">
                                             <label htmlFor="email" className="text-gray-600">Email</label>
                                             <Field

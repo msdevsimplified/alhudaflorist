@@ -76,7 +76,7 @@ const Footer = () => {
                     <p className="text-base font-medium uppercase text-[#18181F] ">Follow us social</p>
 
                         <div className='mt-8 grid grid-cols-3 gap-2'>
-                            <a href="#" className="group relative flex h-12 items-end overflow-hidden bg-gray-100 shadow-lg md:h-20">
+                            <a href="https://www.facebook.com/profile.php?id=61563496229140" className="group relative flex h-12 items-end overflow-hidden bg-gray-100 shadow-lg md:h-20">
                                {/* <Image src="https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/gallery-img-3.jpg" loading="lazy" width={100} height={100} alt="Photo by Minh Pham" className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" /> */}
                                 <img src="https://rosebud.qodeinteractive.com/wp-content/uploads/2018/02/gallery-img-3.jpg" loading="lazy" alt="Photo by Minh Pham" className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
                             </a>

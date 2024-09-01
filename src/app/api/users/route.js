@@ -1,12 +1,15 @@
+import { signJwt } from '@/lib/jwt';
 import { createUserWithAccount, getUserByEmail } from '@/utils/user';
 import bcrypt from 'bcryptjs';
 import { NextResponse } from "next/server";
+import { sendEmail } from '@/app/auth/reset_password/sendEmail';
+import { VerifyAccountEmailTemplate } from '@/app/components/layout/verify_email_template';
 
 export const POST = async (req, res) => {
     const { name, email, password } = await req.json();
-    console.log(name, email, password);
+    // console.log(name, email, password);
     try {
-              
+
         // Check if the email already exists in the database
         const existingUser = await getUserByEmail(email);
         if (existingUser) {
@@ -24,6 +27,22 @@ export const POST = async (req, res) => {
             email,
             password: hashedPassword, // Use the hashed password
         });
+        console.log(newUser)
+        const jwtUserId = signJwt({
+            id: newUser.id,
+          });
+
+        const payload = {
+            to: email,
+            jwt: jwtUserId
+        }
+        
+        await sendEmail({
+            from: 'Admin <onboarding@resend.dev>',
+            to: [email],
+            subject: 'Verify your account',
+            react: VerifyAccountEmailTemplate(payload)
+        });
 
         return NextResponse.json({
             message: "User created",
@@ -33,6 +52,7 @@ export const POST = async (req, res) => {
         }, { status: 201 })
 
     } catch (err) {
+        console.log(err)
         return NextResponse.json({
             message: "Error",
             err

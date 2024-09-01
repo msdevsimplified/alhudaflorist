@@ -3,7 +3,7 @@ import prisma from '../lib/prisma';
 
 export async function createUserWithAccount({ name, email, password }) {
     try {
-        const newUser = await prisma.user.create({
+        const result = await prisma.user.create({
             data: {
                 name,
                 email,
@@ -20,6 +20,7 @@ export async function createUserWithAccount({ name, email, password }) {
                 accounts: true
             }
         })
+        return result
 
     } catch (error) {
         console.error('Error creating user with account: ', error);

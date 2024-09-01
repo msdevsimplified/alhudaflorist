@@ -44,17 +44,8 @@ export const Card = (props) => {
                             {props.product.title}
                             {/* Flowr title */}
                         </p>
-                        {
-                            !hoverStates[props.index] ? (
-                                <p className="text-base text-[#0c5b47] cursor-auto my-2">
-                                    {props.product.price} AED
-                                </p>
-                            ) : (
-                                <ReactWhatsapp number="+971 56 464 8961" className='text-base text-[#0c5b47] cursor-pointer underline my-2' message="Hello World!!!" >Order Now</ReactWhatsapp>
-                            )
-                        }
 
-
+                        <ReactWhatsapp number="+971 56 464 8961" className='text-base text-[#0c5b47] cursor-pointer underline my-2' message="Hello World!!!" >Order Now</ReactWhatsapp>
                     </div>
 
                 </a>
@@ -73,7 +64,7 @@ export const Card = (props) => {
             <Modal open={open} onClose={onCloseModal} center>
                 <div className='max-w-md'>
                     <img
-                        src={props.product.images}
+                        src={props.product.image}
                         alt="Product"
                         className="w-full object-cover"
                         width={0} height={0} style={{ width: '100%', height: 'auto' }}

@@ -83,13 +83,13 @@ export default function OurStory() {
         </div>
         <div className="grid grid-cols-2 gap-5">
           <img
-            className="object-cover w-full h-56 col-span-2 rounded shadow-lg"
-            src="https://ld-wp73.template-help.com/wordpress/prod_7609/v1/wp-content/uploads/2020/02/img16-1355x1020-1-1024x771.jpg"
+            className="object-center bg-cover w-full h-56 col-span-2 rounded shadow-lg"
+            src="https://www.floralallure.me/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2023-05-03-at-12.46.40-q5ws47bts3h3cy1gz7awtxtyjppy07ap6kuig8peyo.jpeg"
             alt=""
           />
           <img
-            className="object-cover w-full h-48 rounded shadow-lg"
-            src="https://asset.bloomnation.com/c_pad,d_vendor:global:catalog:product:image.png,f_auto,fl_preserve_transparency,q_auto/v1612079608/vendor/818/catalog/product/2/0/20200303112318_file_5e5ee6e638ca4_5e5ee750915a6_5ed038470a41b_5ed0384932f72.jpg"
+            className="object-center w-full h-48 rounded shadow-lg"
+            src="https://realflowers.ae/wp-content/uploads/2024/04/Untitled-design-95.jpg"
             alt=""
           />
           <img

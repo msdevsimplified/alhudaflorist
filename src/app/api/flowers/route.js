@@ -38,4 +38,22 @@ export async function GET(req, res) {
         }, { status: 500 });
     }
 }
+export async function DELETE(req, res) {
+    const flower_id = req.params.id
+    try {
+        const flowers = await prisma.user.delete({
+            where: {
+              id: flower_id,
+            },
+          })
+        return NextResponse.json({
+            message: "Flower successfully deleted",
+        }, { status: 201 })
+    } catch (error) {
+        return NextResponse.json({
+            message: "Error while deleting flowers",
+            error
+        }, { status: 500 });
+    }
+}
 

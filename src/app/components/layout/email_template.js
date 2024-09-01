@@ -9,7 +9,7 @@ export const ResetPasswordEmailTemplate = ({ to, token }) => {
             <p>
                 To reset your password, click on this link and follow the instructions:
             </p>
-            <a href={`http://localhost:3000/auth/reset_password?token=${token}`}>
+            <a href={`${process.env.NEXTAUTH_URL}/auth/reset_password?token=${token}`}>
                 Click here to reset password
             </a>
         </div>

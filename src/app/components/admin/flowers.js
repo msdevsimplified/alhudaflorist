@@ -8,6 +8,7 @@ import DataTable from "react-data-table-component";
 import Swal from "sweetalert2";
 
 const FilterComponent = ({ filterText, onFilter, onClear }) => (
+     
     <>
         <div hidden className="md:block">
             <div className="relative flex items-center py-2.5 text-gray-400 focus-within:text-cyan-400">
@@ -37,6 +38,28 @@ const FilterComponent = ({ filterText, onFilter, onClear }) => (
         </div>
     </>
 );
+const handleDelete = (id) => {
+    Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!"
+    }).then((result) => {
+        if (result.isConfirmed) {
+            const res = axios.delete(`http://localhost:3000/api/flowers/${id}`)
+            Swal.fire({
+                title: "Deleted!",
+                text: "Your file has been deleted.",
+                icon: "success"
+            });
+            router.refresh()
+        }
+    });
+
+}
 const columns = [
     {
         name: 'Image',
@@ -59,6 +82,15 @@ const columns = [
         name: 'Price',
         selector: row => row.price,
         sortable: true,
+    },
+    {
+        name: 'Action',
+		cell: row => (
+			<div className="justify-between gap-3 flex flex-row">
+                <Link className="" href={`/admin/editflowers/${row.id}`}><i className="fa-duotone fa-solid fa-pen-to-square"></i></Link>
+                <span className="cursor-pointer" onClick={()=>handleDelete(row.id)}><i className="fa-duotone fa-solid fa-trash"></i></span>
+            </div>
+		),
     },
 ];
 
@@ -84,28 +116,6 @@ export default function AllFlowers() {
     const filteredItems = flowers.filter(item => item.category && item.category.toLowerCase().includes(filterText.toLowerCase()));
 
 
-    const handleDelete = (id) => {
-        Swal.fire({
-            title: "Are you sure?",
-            text: "You won't be able to revert this!",
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#3085d6",
-            cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, delete it!"
-        }).then((result) => {
-            if (result.isConfirmed) {
-                const res = axios.delete(`http://localhost:3000/api/flowers/${id}`)
-                Swal.fire({
-                    title: "Deleted!",
-                    text: "Your file has been deleted.",
-                    icon: "success"
-                });
-                router.refresh()
-            }
-        });
-
-    }
     const subHeaderComponentMemo = React.useMemo(() => {
         const handleClear = () => {
             if (filterText) {

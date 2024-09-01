@@ -87,9 +87,11 @@ export default function AddFlowers() {
                                 <Field as="select" id="category" name="category" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5">
                                     <option selected="">Select category</option>
                                     <option value="Bouquet">Bouquet</option>
+                                    <option value="Occasion">Occasion</option>
+                                    <option value="Ballon">Ballon</option>
                                     <option value="Basket">Basket</option>
-                                    <option value="Mixed">Mixed</option>
-                                    <option value="Arrangement">Arrangement</option>
+                                    <option value="NewBornBaby">NewBornBaby</option>
+                                    <option value="Plants">Plants</option>
                                 </Field>
                                 <ErrorMessage
                                     name="category"

@@ -6,22 +6,9 @@ import bcrypt from 'bcryptjs';
 import prisma from "@/lib/prisma";
 
 import { Prisma } from '@prisma/client';
-import { error } from "console";
 
-if (error instanceof Prisma.PrismaClientKnownRequestError) {
-  console.log(error)
-}
 export const options = {
   adapter: PrismaAdapter(prisma),
-  // callbacks: {
-  //   async jwt({ token, user }) {
-  //     return { ...token, ...user };
-  //   },
-  //   async session({ session, token, user }) {
-  //     session.user = token;
-  //     return session;
-  //   },
-  // },
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
@@ -72,7 +59,35 @@ export const options = {
     }),
   ],
   session: {
-    strategy: "jwt",
+    strategy: 'jwt',
+    maxAge: 30 * 24 * 60 * 60, // 30 days
+  },
+  jwt: {
+    secret: process.env.JWT_SECRET,
+    encryption: true,
+  },
+  callbacks: {
+    async jwt({ token, user }) {
+      if (user) {
+        token.id = user.id;
+      }
+      return token;
+    },
+    async session({ session, token }) {
+      session.user.id = token.id;
+      return session;
+    },
+  },
+  cookies: {
+    sessionToken: {
+      name: `__Secure-next-auth.session-token`,
+      options: {
+        httpOnly: true,
+        sameSite: 'lax',
+        path: '/',
+        secure: process.env.NODE_ENV === 'production',
+      },
+    },
   },
   pages: {
     signIn: "/login",

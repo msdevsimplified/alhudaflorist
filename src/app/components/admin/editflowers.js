@@ -2,11 +2,21 @@
 
 import axios from "axios";
 import { Formik, Field, Form, ErrorMessage } from "formik";
+import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import * as Yup from "yup";
 
-export default function EditFlowers({flower, id}) {
-
+export default function EditFlowers() {
+    const {id} = useParams();
+    console.log(id)
+    const [flower, setFlower] = useState({})
+    const fetchFlower =async ()=>{
+        const res = await axios.get(`/api/flowers/${id}`);
+        setFlower(res.data.data);
+    }
+    useEffect(()=>{
+        fetchFlower()
+    }, [])
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState("");
     const {title, image, price, category, description} = flower;
@@ -117,7 +127,7 @@ export default function EditFlowers({flower, id}) {
                             />
                         </div>
                         <button type="submit" className="inline-flex bg-[#1B1B1B] items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-[#FAFAD2] bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
-                            Add flowers
+                            Save flower
                         </button>
                     </Form>
                 </Formik>

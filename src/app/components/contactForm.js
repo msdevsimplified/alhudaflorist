@@ -61,7 +61,7 @@ const ContactFrom = () => {
                                 </div>
                                 <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
                                     <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs"><i className="fa-duotone fa-envelope"></i> EMAIL</h2>
-                                    <a className="text-indigo-500 leading-relaxed">info@alhudaflorist.com</a>
+                                    <a className="text-indigo-500 leading-relaxed">alhudaoasisflowers@.com</a>
                                     <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4"><i className="fa-brands fa-whatsapp"></i> WhatsApp</h2>
                                     <p className="leading-relaxed">+971 56 464 8961</p>
                                 </div>

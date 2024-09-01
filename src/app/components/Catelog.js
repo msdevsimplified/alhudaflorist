@@ -31,10 +31,13 @@ const Catelog = () => {
           })
       }, [])
     const tabData = [
-        { id: 1, label: "Orchids", data: flowers && flowers.filter(item => item.category === 'Orchids') },
-        { id: 2, label: "Bouquet ", data: flowers && flowers.filter(item => item.category === 'Bouquet') },
-        { id: 3, label: "Occasion ", data: flowers && flowers.filter(item => item.category === 'Occasion') },
-        { id: 4, label: "Mixed", data: flowers && flowers.filter(item => item.category === 'Mixed') },
+        // { id: 1, label: "Orchids", data: flowers && flowers.filter(item => item.category === 'Orchids') },
+        { id: 1, label: "Bouquet", data: flowers && flowers.filter(item => item.category === 'Bouquet') },
+        { id: 2, label: "Occasion ", data: flowers && flowers.filter(item => item.category === 'Occasion') },
+        { id: 3, label: "Ballon decoration", data: flowers && flowers.filter(item => item.category === 'Ballon') },
+        { id: 4, label: "Basket/Gift wrapping", data: flowers && flowers.filter(item => item.category === 'Basket') },
+        { id: 5, label: "New Born Baby", data: flowers && flowers.filter(item => item.category === 'NewBornBaby') },
+        { id: 6, label: "Mixed Plants", data: flowers && flowers.filter(item => item.category === 'Plants') },
     ];
     console.log(flowers)
     return (
