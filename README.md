@@ -78,7 +78,7 @@ npm install
 ## Environment Variables
 Create a .env file in the root directory and add the following environment variables:
 ```makefile
-# DATABASE_URL=MONGO_URI
+DATABASE_URL=MONGO_URI
 NEXTAUTH_SECRET=Your next-auth secret
 NEXTAUTH_URL=http://localhost:3000
 TEMPLATE_ID=resend email template id
