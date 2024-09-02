@@ -3,7 +3,7 @@
 Welcome to the Alhuda Florist website repository! This repository contains the source code and resources for the official website of Alhuda Florist. Alhuda Florist is dedicated to providing exquisite floral arrangements for every occasion. 
 
 ## 🔗 Links
-[![Alhudaflorist.com](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://www.alhudaflorist.com/)
+[![Alhudaflorist.com](https://www.alhudaflorist.com/)
 
 ## Screenshots
 
