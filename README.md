@@ -2,6 +2,14 @@
 
 Welcome to the Alhuda Florist website repository! This repository contains the source code and resources for the official website of Alhuda Florist. Alhuda Florist is dedicated to providing exquisite floral arrangements for every occasion. 
 
+## 🔗 Website link
+[![portfolio](https://www.alhudaflorist.com/)
+
+## Screenshots
+
+![Front-End](https://i.postimg.cc/j2GQR4yr/scrnli-9-2-2024-12-00-10-PM.png)
+![Admin Dashboard](https://i.postimg.cc/yx9ngG1N/scrnli-9-2-2024-12-04-19-PM.png)
+
 ## Overview
 
 The Alhuda Florist website showcases our diverse range of flower collections, offers online ordering capabilities, and provides information about our services. This project includes both the front-end and back-end components of the website.
@@ -70,7 +78,7 @@ npm install
 ## Environment Variables
 Create a .env file in the root directory and add the following environment variables:
 ```makefile
-# DATABASE_URL="mongodb+srv://alhudadb:adminalhudaflorist@job-task.dm2ojxt.mongodb.net/alhudadb?retryWrites=true&w=majority&appName=job-task"
+# DATABASE_URL=MONGO_URI
 NEXTAUTH_SECRET=Your next-auth secret
 NEXTAUTH_URL=http://localhost:3000
 TEMPLATE_ID=resend email template id
