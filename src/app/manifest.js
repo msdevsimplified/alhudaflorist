@@ -1,7 +1,7 @@
 export default function manifest() {
     return {
-      name: 'Best flowers shop & planet',
-      short_name: 'Most popular flowers shop & planet trading in UAE, DUBAI',
+      name: 'Alhuda Florist',
+      short_name: 'Best flowers shop & planet,Most popular flowers shop & planet trading in UAE, DUBAI',
       description: 'Alhuda florist is a number one flower shop & planet trading in uae and dubai, abudhabi, sharjah',
       start_url: '/',
       display: 'standalone',
