@@ -32,17 +32,19 @@ If you interact with this repository or related services, we may collect and pro
 
 ## Features
 
-- **Flower Collections**: Browse through our collections including Classic Elegance, Seasonal Splendor, Modern Chic, Romantic Inspirations, Sympathy and Comfort, and Corporate and Event.
-- **Online Ordering**: Easily place orders for delivery or pickup.
-- **Contact Information**: Find our contact details and store location.
-- **Responsive Design**: The website is optimized for both desktop and mobile devices.
+- **Admin Dashboard**: Manage orders, flower collections, and view analytics.
+- **Authentication**: Complete user authentication including login, logout, password recovery, and email verification.
+- **WhatsApp Integration**: Direct communication and support via WhatsApp.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
 
 ## Technology Stack
 
-- **Front-End**: HTML, CSS, JavaScript, React
-- **Back-End**: Node.js, Express.js
-- **Database**: MongoDB
-- **Hosting**: [Specify hosting platform, e.g., AWS, Heroku]
+- **Front-End**: Next.js, React, Tailwind CSS (or specify another CSS framework)
+- **Back-End**: Next.js API routes
+- **Database**: MongoDB, managed via Prisma
+- **Authentication**: NextAuth.js, Email verification, password reset.
+- **WhatsApp Integration**: WhatsApp Business API
+- **Hosting**: Vercel
 
 ## Installation
 
@@ -68,9 +70,13 @@ npm install
 ## Environment Variables
 Create a .env file in the root directory and add the following environment variables:
 ```makefile
-MONGODB_URI=your_mongodb_connection_string
-PORT=your_preferred_port
-SECRET_KEY=your_secret_key
+# DATABASE_URL="mongodb+srv://alhudadb:adminalhudaflorist@job-task.dm2ojxt.mongodb.net/alhudadb?retryWrites=true&w=majority&appName=job-task"
+NEXTAUTH_SECRET=Your next-auth secret
+NEXTAUTH_URL=http://localhost:3000
+TEMPLATE_ID=resend email template id
+SERVICE_ID=resend service id
+RESEND_API_KEY=Your resend api key
+JWT_SECRET=Your JWT secret key
 ```
 ## Run the Application
 Start development application:
@@ -78,15 +84,21 @@ Start development application:
 npm run dev
 ```
 Visit `http://localhost:3000` in your browser to view the website.
+```bash
+npx prisma studio
+```
+Visit `http://localhost:5555` in your browser to view prisma mongodb database.
+
 ## Usage
 
 -   **Home Page**: View featured flower collections and promotions.
     
 -   **Collections Page**: Explore different flower collections.
     
--   **Order Page**: Place an order or get in touch with us.
+-   **About Page**: To Knows more about Alhuda florist.
     
 -   **Contact Page**: Find contact details and store location.
+
 ## Contributing
 
 We welcome contributions to improve the Alhuda Florist website. Please follow these guidelines:
