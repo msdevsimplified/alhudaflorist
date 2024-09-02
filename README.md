@@ -7,7 +7,7 @@ Welcome to the Alhuda Florist website repository! This repository contains the s
 
 ## Screenshots
 
-![Front-End](https://i.postimg.cc/j2GQR4yr/scrnli-9-2-2024-12-00-10-PM.png)
+![Front-End](https://i.postimg.cc/d1QK98kv/scrnli-9-2-2024-12-13-31-PM.png)
 ![Admin Dashboard](https://i.postimg.cc/yx9ngG1N/scrnli-9-2-2024-12-04-19-PM.png)
 
 ## Overview
