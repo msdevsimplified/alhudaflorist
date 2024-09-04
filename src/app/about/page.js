@@ -9,22 +9,15 @@ const About = () => {
                         <div class="w-full px-4">
                             <div class="mt-10 lg:mt-0">
                                 <span class="block mb-4 text-lg font-semibold text-primary">
-                                    Why Choose Us
+                                   Al-Huda Florist
                                 </span>
                                 <h2
                                     class="mb-5 text-3xl font-bold text-[#1b745e] sm:text-[40px]/[48px]"
                                 >
-                                    Make your customers happy by giving services.
+                                    Where Every Flower Tells a Story
                                 </h2>
                                 <p class="mb-5 text-base text-body-color dark:text-dark-6">
-                                    It is a long established fact that a reader will be distracted
-                                    by the readable content of a page when looking at its layout.
-                                    The point of using Lorem Ipsum is that it has a more-or-less.
-                                </p>
-                                <p class="mb-8 text-base text-body-color dark:text-dark-6">
-                                    A domain name is one of the first steps to establishing your
-                                    brand. Secure a consistent brand image with a domain name that
-                                    matches your business.
+                                Welcome to Al Huda Florist, your trusted local florist in [Your Location]. We specialize in creating beautiful, high-quality floral arrangements for every occasion. Whether you’re celebrating a wedding, anniversary, birthday, or simply want to brighten someone’s day, our expertly crafted bouquets are designed to leave a lasting impression.
                                 </p>
                                 <a
                                     href="javascript:void(0)"

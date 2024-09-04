@@ -5,7 +5,7 @@ export default function OurStory() {
       <div className="flex flex-col justify-center items-center mb-2 md:mx-auto sm:text-center md:mb-24">
         <div>
           <p className="inline-block parisienne-regular px-3 py-px mb-4 text-3xl font-semibold tracking-wider text-[#0c5b47] rounded-full bg-teal-accent-400">
-            Why Choose Us
+            Our Services
           </p>
         </div>
         <h2 className="max-w-lg mb-6 text-3xl font-bold leading-none tracking-tight text-[#E6BE8A] sm:text-4xl md:mx-auto">
@@ -21,12 +21,11 @@ export default function OurStory() {
               </div>
             </div>
             <div>
-              <h6 className="mb-2 text-gray-800 font-medium text-xl ">
-                Freshness Guaranteed
+              <h6 className="mb-2 text-[#0c5b47] font-medium text-xl ">
+                Wedding Floral Arrangements
               </h6>
-              <p className="text-sm text-[#0c5b47] font-normal">
-                We source our flowers from the finest local and international
-                growers to ensure freshness and quality in every arrangement.
+              <p className="text-sm text-[#000] font-normal">
+                Make your special day unforgettable with our stunning wedding flowers and bridal bouquets
               </p>
               {/* <hr className="w-full my-6 border-pink-300" /> */}<br />
             </div>
@@ -38,12 +37,11 @@ export default function OurStory() {
               </div>
             </div>
             <div>
-              <h6 className="mb-2 text-gray-800 font-medium text-xl">
-                Expert Florists
+              <h6 className="mb-2 text-[#0c5b47] font-medium text-xl">
+                Corporate Floral Services
               </h6>
-              <p className="text-sm text-[#0c5b47] font-normal">
-                Our team of skilled florists combines creativity and expertise
-                to design captivating floral masterpieces that exceed your expectations.
+              <p className="text-sm text-[#000] font-normal">
+                Enhance your workspace or impress clients with our elegant corporate floral arrangements.
               </p>
               {/* <hr className="w-full my-6 border-pink-300" /> */}<br />
             </div>
@@ -55,12 +53,11 @@ export default function OurStory() {
               </div>
             </div>
             <div>
-              <h6 className="mb-2 text-gray-800 font-medium text-xl">
-                Wide Selection
+              <h6 className="mb-2 text-[#0c5b47] font-medium text-xl">
+                Sympathy & Funeral Flowers
               </h6>
-              <p className="text-sm text-[#0c5b47] font-normal">
-                Explore our diverse range of flowers, including classic roses, exotic orchids,
-                vibrant lilies, and more, to find the perfect blooms for any occasion.
+              <p className="text-sm text-[#000] font-normal">
+                Express your condolences with our thoughtful and respectful floral tributes.
               </p>
               {/* <hr className="w-full my-6 border-pink-300" /> */}<br />
             </div>
@@ -72,11 +69,11 @@ export default function OurStory() {
               </div>
             </div>
             <div>
-              <h6 className="mb-2 text-gray-800 font-medium text-xl">
-                Customization
+              <h6 className="mb-2 text-[#0c5b47] font-medium text-xl">
+                Custom Bouquets
               </h6>
-              <p className="text-sm text-[#0c5b47] font-normal">
-                Looking for something unique? We offer customizable arrangements tailored to your preferences and budget, ensuring a personalized touch every time.
+              <p className="text-sm text-[#000] font-normal">
+                Need something specific? Let our skilled florists create a custom bouquet that reflects your unique style.
               </p>
             </div>
           </div>

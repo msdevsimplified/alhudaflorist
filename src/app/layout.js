@@ -1,8 +1,8 @@
 import AuthProvider from "@/context/AuthProvider";
 import "./globals.css";
-
+import 'react-toastify/dist/ReactToastify.css';
 export const metadata = {
-  title: "Al Huda Flowers",
+  title: "AlHuda Flowers",
   description: "A Flower And Planet Trading by Al Huda Oasis",
 };
 
@@ -12,6 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32"/>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Sofia&family=Tangerine:wght@400;700&display=swap" rel="stylesheet"></link>

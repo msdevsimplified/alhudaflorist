@@ -6,7 +6,7 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import PageLayout from "@/app/components/layout/PageLayout";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 
 const Login = ({ searchParams }) => {
     const [loading, setLoading] = useState(false)
@@ -38,30 +38,27 @@ const Login = ({ searchParams }) => {
             setError(result.error)
             return;
         }
-        toast.success("Welcome To Sakura Dev Channel");
-        
+
         router.push(searchParams.callbackUrl ? searchParams.callbackUrl : "/");
     };
     return (
 
         <PageLayout>
+            <ToastContainer />
             <div className="relative py-16 bg-white">
                 <div className="container relative m-auto px-6 text-gray-500 md:px-12 xl:px-40">
                     <div className="m-auto space-y-8 md:w-8/12 lg:w-6/12 xl:w-6/12">
                         <div className="rounded-3xl border border-[#E6BE8A] bg-white shadow-2xl shadow-gray-600/10 backdrop-blur-2xl">
                             <div className="p-8 py-12 sm:p-16">
                                 <h2 className="mb-8 text-2xl font-bold text-center text-gray-800 ">Sign in to your account</h2>
-                                {
-                                    error && <div className="text-sm p-3 text-center bg-green-200 min-w-full ">{error}<br/></div>
-                                }
-                                <br/>
+                                <br />
                                 <Formik
                                     initialValues={initialValues}
                                     validationSchema={validationSchema}
                                     onSubmit={handleLogin}
                                 >
                                     <Form className="space-y-8">
-                                        
+
                                         <div className="space-y-2">
                                             <label htmlFor="email" className="text-gray-600">Email</label>
                                             <Field

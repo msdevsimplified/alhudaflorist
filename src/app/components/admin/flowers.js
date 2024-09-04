@@ -5,10 +5,11 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import DataTable from "react-data-table-component";
+import { toast } from "react-toastify";
 import Swal from "sweetalert2";
 
 const FilterComponent = ({ filterText, onFilter, onClear }) => (
-     
+
     <>
         <div hidden className="md:block">
             <div className="relative flex items-center py-2.5 text-gray-400 focus-within:text-cyan-400">
@@ -38,66 +39,85 @@ const FilterComponent = ({ filterText, onFilter, onClear }) => (
         </div>
     </>
 );
-const handleDelete = (id) => {
-    Swal.fire({
-        title: "Are you sure?",
-        text: "You won't be able to revert this!",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Yes, delete it!"
-    }).then((result) => {
-        if (result.isConfirmed) {
-            const res = axios.delete(`http://localhost:3000/api/flowers/${id}`)
-            Swal.fire({
-                title: "Deleted!",
-                text: "Your file has been deleted.",
-                icon: "success"
-            });
-            router.refresh()
-        }
-    });
-
+const deleteFlower = async (id) => {
+    const res = await axios.delete(`http://localhost:3000/api/flowers/${id}`)
+    return res.status
 }
-const columns = [
-    {
-        name: 'Image',
-        selector: row => row.image,
-        cell: row =>(
-            <img src={row.image} alt={row.title} height={80} width={80} />
-        )
-    },
-    {
-        name: 'Name',
-        selector: row => row.title,
-        sortable: true,
-    },
-    {
-        name: 'Category',
-        selector: row => row.category,
-        sortable: true,
-    },
-    {
-        name: 'Price',
-        selector: row => row.price,
-        sortable: true,
-    },
-    {
-        name: 'Action',
-		cell: row => (
-			<div className="justify-between gap-3 flex flex-row">
-                <Link className="" href={`/admin/editflowers/${row.id}`}><i className="fa-duotone fa-solid fa-pen-to-square"></i></Link>
-                <span className="cursor-pointer" onClick={()=>handleDelete(row.id)}><i className="fa-duotone fa-solid fa-trash"></i></span>
-            </div>
-		),
-    },
-];
-
 export default function AllFlowers() {
     const { data } = useSession();
     const router = useRouter();
-    console.log(data)
+    const [deletedFile, setDeletedFile] = useState("")
+    const handleDelete = (id) => {
+
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                deleteFlower(id)
+                    .then((res) => {
+                        router.refresh()
+                        getFlowers()
+                        Swal.fire({
+                            title: "Deleted!",
+                            text: "Your file has been deleted.",
+                            icon: "success"
+                        });
+                    }
+                    )
+                    .catch((err) => {
+                        Swal.fire({
+                            title: "Deleted!",
+                            text: "Flower has not been deleted",
+                            icon: "success"
+                        });
+                        throw new Error("Flower has not been deleted")
+                    })
+
+            }
+        });
+
+    }
+
+    const columns = [
+        {
+            name: 'Image',
+            selector: row => row.image,
+            cell: row => (
+                <img src={row.image} alt={row.title} height={80} width={80} />
+            )
+        },
+        {
+            name: 'Name',
+            selector: row => row.title,
+            sortable: true,
+        },
+        {
+            name: 'Category',
+            selector: row => row.category,
+            sortable: true,
+        },
+        {
+            name: 'Price',
+            selector: row => row.price,
+            sortable: true,
+        },
+        {
+            name: 'Action',
+            cell: row => (
+                <div className="justify-between gap-3 flex flex-row">
+                    <Link className="" href={`/admin/editflowers/${row.id}`}><i className="fa-duotone fa-solid fa-pen-to-square"></i></Link>
+                    <span className="cursor-pointer" onClick={() => handleDelete(row.id)}><i className="fa-duotone fa-solid fa-trash"></i></span>
+                </div>
+            ),
+        },
+    ];
+    console.log(deletedFile)
     // if (status !== "authenticated") {
     //   router.push("/login");
     // }
@@ -106,6 +126,7 @@ export default function AllFlowers() {
     const getFlowers = async () => {
         const res = await axios.get('http://localhost:3000/api/flowers')
         setFlowers(res.data.data)
+        console.log(res.data.data)
     }
     useEffect(() => {
         getFlowers()
@@ -136,82 +157,9 @@ export default function AllFlowers() {
 
                     <span className="px-3 py-1 text-xs text-black bg-[#FAFAD2] rounded-full">{flowers.length} flowers</span>
                 </div>
-                
+
             </div>
 
-            {/* <div className="flex flex-col mt-6">
-                <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                    <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
-                        <div className="overflow-hidden border border-gray-200 md:rounded-lg">
-                            <table className="min-w-full divide-y divide-gray-200">
-                                <thead className="bg-gray-50">
-                                    <tr>
-
-
-                                        <th scope="col" className="px-12 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500">
-                                            Flower name
-                                        </th>
-
-                                        <th scope="col" className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500">
-                                            Category
-                                        </th>
-
-                                        <th scope="col" className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500">
-                                            Section
-                                        </th>
-                                        <th scope="col" className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500">
-                                            Price
-                                        </th>
-
-                                        <th scope="col" className="relative py-3.5 px-4">
-                                            <span className="sr-only">Edit</span>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody className="bg-white divide-y divide-gray-200">
-                                    {
-                                        flowers && flowers.map((flower, index) => {
-                                            return (
-                                                <tr key={index}
-                                                >
-
-                                                    <td className="px-4 py-4 inline-flex gap-2 text-sm font-medium text-gray-700 whitespace-nowrap">
-                                                        <input type="checkbox" className="text-blue-500 border-gray-300 rounded" />
-                                                        <div className="flex items-center gap-x-2">
-
-                                                            <img className="object-cover w-12 h-12 rounded-full" src={flower.image} alt="" />
-                                                            <div>
-                                                                <h2 className="text-sm font-medium text-gray-500">{flower.title}</h2>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td className="px-4 py-4 text-sm text-gray-500 whitespace-nowrap">{flower.category}</td>
-                                                    <td className="px-4 py-4 text-sm text-gray-500 whitespace-nowrap">{flower.section}</td>
-                                                    <td className="px-4 py-4 text-sm text-gray-500 whitespace-nowrap">AED {flower.price}</td>
-                                                    <td className="px-4 py-4 inline-flex gap-0 text-sm whitespace-nowrap">
-
-                                                        <Link href={`/admin/editflowers/${flower.id}`} className="block px-2 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform">
-                                                            <i className="fa-sharp fa-solid fa-pen-to-square"></i> Edit
-                                                        </Link>
-
-                                                        <button 
-                                                        onClick={() => handleDelete(flower.id)}
-                                                        className="block px-2 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform">
-                                                            <i className="fa-regular fa-trash-can"></i> Delete
-                                                        </button>
-
-                                                    </td>
-                                                </tr>
-                                            )
-                                        })
-                                    }
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
             <DataTable
                 title=""
                 columns={columns}

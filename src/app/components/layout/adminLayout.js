@@ -56,7 +56,7 @@ export default function AdminLayout({ children }) {
                                 >
                                     <path
                                         className="fill-current text-gray-600 group-hover:text-cyan-600"
-                                        fill-rule="evenodd"
+                                        fillRule="evenodd"
                                         d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z"
                                         clip-rule="evenodd"
                                     />
@@ -134,7 +134,7 @@ export default function AdminLayout({ children }) {
                             <path
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
-                                stroke-width="2"
+                                strokeWidth="2"
                                 d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
                             />
                         </svg>
@@ -144,7 +144,7 @@ export default function AdminLayout({ children }) {
             </aside>
 
             <div className="ml-auto mb-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%]">
-                <div className="sticky top-0 h-auto bg-white lg:py-2.5">
+                <div className="sticky z-50 top-0 h-auto bg-white lg:py-2.5">
                     <div className="flex items-center justify-between space-x-4 px-6 2xl:container">
                         <h5 hidden className="text-2xl font-medium text-gray-600 lg:block">Dashboard</h5>
                         <button className="-mr-2 h-16 w-12 border-r lg:hidden">
@@ -261,7 +261,7 @@ export default function AdminLayout({ children }) {
                     </div>
                 </div>
 
-                <div className="px-8 ">
+                <div className="px-8 z-10">
                     <div className="flex h-auto pt-12 pb-8 items-start justify-start rounded-xl border-2 border-dashed border-gray-300">
                         {children}
                     </div>

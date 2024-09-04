@@ -135,7 +135,7 @@ const Header = () => {
                                 <span className="font-medium text-gray-600">New this season</span>
                             </span>
                             <h1 className="text-4xl font-bold md:text-5xl text-gray-800">Alhuda Florist</h1>
-                            <p className="text-3xl font-bold md:text-4xl">Your Oasis of <span className=''>Floral</span> Delights in the Heart of the UAE!</p>
+                            <p className="text-3xl font-bold md:text-4xl">Your Oasis of Floral Delights in the Heart of the UAE!</p>
                             <p className="text-lg text-gray-700">Elevate Every Occasion with Our Handcrafted Bouquets and Arrangements.</p>
 
                             <div className="flex space-x-4">

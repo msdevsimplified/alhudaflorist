@@ -3,6 +3,7 @@ import axios from "axios";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { Bounce, toast, ToastContainer } from "react-toastify";
 import * as Yup from "yup";
 
 export default function AddFlowers() {
@@ -33,18 +34,35 @@ export default function AddFlowers() {
             const response = await axios.post('/api/flowers', {
                 title, image, price, category, description, section
             });
+            
+            toast.success(`Flower added!`, {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                transition: Bounce,
+                });
             console.log(response)
             // router.push('/');
         } catch (error) {
-            console.log("Error occurred while uploading: ", error.response);
+            toast.error("An error occurred!")
+            console.log("Error occurred while uploading: ", error);
             setError("An error occurred")
         }
 
     };
+    const notify = () => toast("Wow so easy !");
     return (
         <section className="">
+            
+             
             <div className=" px-4 mx-auto max-w-2xl ">
                 <h2 className="mb-8 text-xl font-bold text-gray-900">Add flowers</h2>
+                <ToastContainer/>
                 <Formik
                     initialValues={initialValues}
                     validationSchema={validationSchema}

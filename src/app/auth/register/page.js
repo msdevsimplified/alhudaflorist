@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import PageLayout from "@/app/components/layout/PageLayout";
+import { toast, ToastContainer } from "react-toastify";
 
 const Register = () => {
     const [loading, setLoading] = useState(false)
@@ -37,14 +38,18 @@ const Register = () => {
                 email,
                 password,
             });
-            router.push('/');
+            toast.success(response.data?.message);
+            setTimeout(() => {
+                router.push('/auth/login');
+            }, 3000);
         } catch (error) {
             if (error.response && error.response.status === 400) {
                 // Handle 400 Bad Request (email already exists)
                 setError("Email already exist");
+                toast.error("Email already exist");
             } else {
                 // Handle other errors
-                console.log("Error creating user with accountss: ", error);
+                toast.error("An error occurred");
                 setError("An error occurred");
             }
         }
@@ -53,11 +58,13 @@ const Register = () => {
 
         <PageLayout>
             <div className="relative py-16">
+            <ToastContainer autoClose={5000} />
                 <div className="container relative m-auto px-6 text-gray-500 md:px-12 xl:px-40">
                     <div className="m-auto space-y-8 md:w-8/12 lg:w-6/12 xl:w-6/12">
                         <div className="rounded-3xl border border-[#E6BE8A] bg-white shadow-2xl shadow-gray-600/10 backdrop-blur-2xl">
                             <div className="p-8 py-12 sm:p-16">
                                 <h2 className="mb-8 text-2xl font-bold text-center text-gray-800 ">Sign up to your account</h2>
+                                
                                 <Formik
                                     initialValues={initialValues}
                                     validationSchema={validationSchema}
