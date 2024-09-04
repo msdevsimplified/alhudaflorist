@@ -1,6 +1,6 @@
 datasource db {
   provider = "mongodb"
-  url      = env("DATABASE_URL")
+  url      = "mongodb+srv://admin:dGmF4aLZ8VoSuGVG@cluster0.sms59gx.mongodb.net/alhudaflorist?retryWrites=true&w=majority&appName=Cluster0"
 }
  
 generator client {
