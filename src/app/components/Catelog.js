@@ -11,7 +11,7 @@ const Catelog = () => {
     const fetchData = async () => {
         try {
             console.log('try')
-            const response = await axios.get('http://localhost:3000/api/flowers')
+            const response = await axios.get(`${process.env.NEXTAUTH_URL}/api/flowers`)
             console.log(response)
             setLoding(false)
             setFlowers(response.data.data)
@@ -22,7 +22,7 @@ const Catelog = () => {
     }
     // fetchData()
     useEffect(() => {
-        fetch('http://localhost:3000/api/flowers')
+        fetch(`${process.env.NEXTAUTH_URL}/api/flowers`)
           .then((res) => res.json())
           .then((data) => {
             console.log(data)
@@ -39,7 +39,6 @@ const Catelog = () => {
         { id: 5, label: "New Born Baby", data: flowers && flowers.filter(item => item.category === 'NewBornBaby') },
         { id: 6, label: "Mixed Plants", data: flowers && flowers.filter(item => item.category === 'Plants') },
     ];
-    console.log(flowers)
     return (
         <div className="bg-white pt-16">
             <div className="max-w-xl flex flex-col justify-center mb-2 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
