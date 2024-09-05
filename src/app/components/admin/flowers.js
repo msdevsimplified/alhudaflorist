@@ -40,7 +40,7 @@ const FilterComponent = ({ filterText, onFilter, onClear }) => (
     </>
 );
 const deleteFlower = async (id) => {
-    const res = await axios.delete(`${process.env.NEXTAUTH_URL}/api/flowers/${id}`)
+    const res = await axios.delete(`https://www.alhudaflorist.com/api/flowers/${id}`)
     return res.status
 }
 export default function AllFlowers() {
@@ -124,7 +124,7 @@ export default function AllFlowers() {
     const [flowers, setFlowers] = useState([])
 
     const getFlowers = async () => {
-        const res = await axios.get(`${process.env.NEXTAUTH_URL}/api/flowers`)
+        const res = await axios.get(`https://www.alhudaflorist.com/api/flowers`)
         setFlowers(res.data.data)
         console.log(res.data.data)
     }

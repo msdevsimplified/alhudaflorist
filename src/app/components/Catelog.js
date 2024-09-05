@@ -11,7 +11,7 @@ const Catelog = () => {
     const fetchData = async () => {
         try {
             console.log('try')
-            const response = await axios.get(`${process.env.NEXTAUTH_URL}/api/flowers`)
+            const response = await axios.get(`https://www.alhudaflorist.com/api/flowers`)
             console.log(response)
             setLoding(false)
             setFlowers(response.data.data)
@@ -22,7 +22,7 @@ const Catelog = () => {
     }
     // fetchData()
     useEffect(() => {
-        fetch(`${process.env.NEXTAUTH_URL}/api/flowers`)
+        fetch(`https://www.alhudaflorist.com/api/flowers`)
           .then((res) => res.json())
           .then((data) => {
             console.log(data)
