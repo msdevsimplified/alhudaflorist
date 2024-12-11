@@ -41,7 +41,7 @@ const Gallary = () => {
                                         <a rel="noopener noreferrer" href="#" className="font-medium text-md group-hover:underline text-[#FFF0E9]">Vibrant Energy mix floral Arrangement</a>
                                     </h2>
                                 </div>
-                                <div className="relative flex items-end justify-start w-full text-left bg-center bg-cover cursor-pointer h-96 group dark:bg-gray-500 bg-[url('/assets/whatsapp_flower/IMG-20241211-WA0002.jpg')]">
+                                <div className="relative flex items-end justify-start w-full text-left bg-center bg-cover cursor-pointer h-96 group dark:bg-gray-500 bg-[url('/assets/whatsapp_flower/IMG-20241211-WA0013.jpg')]">
                                     <div className="absolute top-0 bottom-0 left-0 right-0 dark:via-transparent dark:from-gray-900 dark:to-gray-900"></div>
                                     <div className="absolute top-0 left-0 right-0 flex items-center justify-between mx-5 mt-3">
                                         <a rel="noopener noreferrer" href="#" className="px-3 py-2 text-xs font-semibold tracki uppercase hover:underline bg-[#E6BE8A] text-black">Bouquet</a>
